@@ -92,9 +92,9 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* Featured testimonial — large avatar hero layout */}
+        {/* Featured testimonial — large avatar hero layout, fixed height to prevent layout shift */}
         <div
-          className={`flex flex-col items-center ${
+          className={`flex min-h-[420px] flex-col items-center md:min-h-[380px] ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`}
           style={{ animationDelay: '0.2s' }}
@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
 
           {/* Testimonial text */}
           <blockquote className="mb-8 max-w-2xl text-center">
-            <p className="font-light leading-relaxed text-primary-foreground/90 text-lg md:text-xl lg:text-2xl">
+            <p className="font-light leading-relaxed text-primary-foreground/90 text-lg md:text-xl lg:text-2xl line-clamp-4">
               {active.text}
             </p>
           </blockquote>

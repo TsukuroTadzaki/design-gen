@@ -42,7 +42,7 @@ export default function ContactsHeroSection() {
 
   return (
     <section
-      className="relative min-h-[60vh] w-full overflow-hidden md:min-h-[55vh] lg:min-h-[65vh]"
+      className="relative w-full overflow-hidden"
       aria-label="Контактна інформація KavaBAR"
     >
       {/* Background Image — exterior / entrance of KavaBAR */}
@@ -54,8 +54,10 @@ export default function ContactsHeroSection() {
         />
       </div>
 
-      {/* Dark Gradient Overlay — from bottom for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/60 to-foreground/30" />
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/60 to-foreground/40" />
+      {/* Extra top gradient for fixed header readability */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/50 via-black/25 to-transparent" />
 
       {/* Subtle grain texture */}
       <div
@@ -73,8 +75,8 @@ export default function ContactsHeroSection() {
       />
 
       {/* Content — positioned at bottom */}
-      <div className="relative flex min-h-[60vh] items-end md:min-h-[55vh] lg:min-h-[65vh]">
-        <div className="mx-auto w-full max-w-7xl px-4 pb-16 md:px-6 md:pb-20 lg:px-8 lg:pb-24">
+      <div className="relative">
+        <div className="mx-auto w-full max-w-7xl px-4 pt-28 pb-16 md:px-6 md:pt-32 md:pb-20 lg:px-8 lg:pt-36 lg:pb-24">
           <div
             className={`transition-all duration-1000 ease-out ${
               isVisible

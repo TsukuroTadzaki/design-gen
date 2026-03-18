@@ -29,8 +29,10 @@ export default function HomeHeroSection() {
         />
       </div>
 
-      {/* Dark Gradient Overlay — from bottom for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/50 to-foreground/20" />
+      {/* Dark Gradient Overlay — bottom for text, top for header readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/50 to-foreground/40" />
+      {/* Extra top gradient for fixed header readability */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/50 via-black/25 to-transparent" />
 
       {/* Subtle grain texture overlay */}
       <div
@@ -47,8 +49,8 @@ export default function HomeHeroSection() {
         aria-hidden="true"
       />
 
-      {/* Content — positioned at bottom */}
-      <div className="relative flex min-h-[70vh] items-end md:min-h-[65vh] lg:min-h-[70vh]">
+      {/* Content — positioned at bottom, pt-24 accounts for fixed header */}
+      <div className="relative flex min-h-[70vh] items-end pt-24 md:min-h-[65vh] md:pt-28 lg:min-h-[70vh]">
         <div className="mx-auto w-full max-w-7xl px-4 pb-16 md:px-6 md:pb-20 lg:px-8 lg:pb-24">
           <div
             className={`max-w-3xl transition-all duration-1000 ease-out ${

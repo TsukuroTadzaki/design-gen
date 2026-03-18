@@ -39,8 +39,7 @@ export default function HomeCtaSection() {
 
           <Button
             asChild
-            variant="outline"
-            className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10 rounded-full px-10 py-4 font-medium text-base w-full sm:w-auto"
+            className="bg-white text-accent hover:bg-white/90 rounded-full px-10 py-4 font-medium text-base w-full sm:w-auto"
           >
             <Link to="/menu">
               <BookOpen className="mr-2 h-5 w-5" />

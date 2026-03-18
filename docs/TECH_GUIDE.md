@@ -173,10 +173,12 @@ export default function Home() {
 
 - Always includes logo/brand name and navigation links
 - Must have working mobile menu (hamburger → slide-over drawer from right, NOT dropdown)
-- Navigation links must use `<Link to="...">` from react-router-dom
+- Navigation links must use `ProjectLink` from `@/core/lib/project-context.tsx` (aliased as `Link`), NOT `Link` from react-router-dom directly
 - Links should match pages defined in `project.config.ts`
 - **Active nav state is REQUIRED** — current page link must be visually highlighted (accent color, underline, or bold)
 - Sticky/fixed positioning is welcome but optional
+- When header is fixed/sticky/absolute, the FIRST section on every page MUST account for header height with top padding (`pt-20` or equivalent). Without this, content hides behind the header.
+- If header is transparent on hero, ensure navigation text is readable over hero background. Add dark overlay at top of hero, semi-transparent header bg, or text-shadow on nav items.
 
 ---
 
@@ -211,6 +213,13 @@ export default function Home() {
 - ❌ Make scroll-to-top button with dark bg (`bg-foreground`) — invisible on dark sections. Use `bg-card text-foreground border` for universal visibility
 - ❌ Open modals/drawers/slideovers/sheets without locking body scroll — ALWAYS disable body scroll when overlay is open (`document.body.style.overflow = 'hidden'` on open, restore on close). Without this, users can scroll the page behind the overlay.
 - ❌ Forget active nav state — current page link in Header MUST be visually highlighted at all times
+- ❌ Use single quotes for Ukrainian text with apostrophes (`'п'ється'`) — breaks JSX. Use double quotes (`"п'ється"`) or template literals
+- ❌ Use `<Link to="...">` from react-router-dom directly — use `ProjectLink` from `@/core/lib/project-context.tsx` for correct project-prefixed routing
+- ❌ Generate CTA buttons that reference modals/forms but don't implement them — if the button says "Book" or "Request callback", the Dialog/Sheet with form MUST exist in the same component
+- ❌ Make inner page heroes same height as home hero — inner pages use compact hero (py-16 md:py-24, title + subtitle only)
+- ❌ Use ghost/transparent buttons on backgrounds where they become invisible — always verify button text color contrasts with section background
+- ❌ Use carousel/slider without fixed container height — content below will jump on slide change
+- ❌ Use large solid-color sections without any visual texture — they look flat and unfinished. Add subtle pattern, gradient, or decorative elements
 
 ---
 
@@ -322,6 +331,14 @@ Verify before outputting generated code:
 - [ ] All grid cells filled (no empty gaps in bento/grid layouts)
 - [ ] Active nav state — current page highlighted in Header navigation
 - [ ] Body scroll locked when any modal/drawer/slideover/sheet is open
+- [ ] Hero sections have top padding for fixed/sticky header
+- [ ] Navigation uses ProjectLink, not Link from react-router-dom
+- [ ] All CTA buttons that reference forms have working Dialog/Sheet with form
+- [ ] Inner page heroes are compact (not full-height like home hero)
+- [ ] Buttons are readable on their section background color
+- [ ] Carousels have fixed-height containers
+- [ ] No single-quote strings with Ukrainian apostrophes
+- [ ] Dark/colored sections have visual texture or decoration (not flat solid)
 
 ---
 

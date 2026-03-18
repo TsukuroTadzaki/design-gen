@@ -56,11 +56,31 @@ Condensed lessons from past project iterations. These represent real mistakes th
 
 ---
 
-## Technical (Phase 3)
+## Phase 3 Generation
 
+### Header & Hero Interaction
+- Hero section MUST have top padding equal to header height (pt-20 or similar) when header is fixed/sticky/absolute. Otherwise first content (badges, headings) hides behind the header. KavaBAR v1.
+- Transparent header on hero requires readability check. If hero has a background image, navigation text may become invisible on light areas. Solutions (choose per project): (a) semi-transparent header bg `bg-background/60 backdrop-blur`, (b) dark gradient overlay at top of hero `bg-gradient-to-b from-black/50 via-black/25 to-transparent h-32`, (c) text-shadow on nav items `[text-shadow:0_1px_3px_rgba(0,0,0,0.8)]`, (d) ensure hero image is dark at top. Always test: is navigation readable over the hero? KavaBAR v1: white nav on light sky photo.
+
+### Modals & Forms
+- If design.json or plan.json specifies booking/callback/contact forms — actual Dialog or Sheet components MUST be generated with working form fields, submit handler (e.preventDefault + success state), and close button. CTA buttons that reference these forms MUST open the modal on click. NEVER generate a "Book" button that does nothing or just scrolls. KavaBAR v1: zero modals despite booking form in spec.
+
+### Inner Page Heroes
+- Home page hero is full presentation: large height (min-h-[70vh] or similar), full content (headline, subheadline, CTAs, trust badges, visual). Inner page heroes are compact headers: shorter height (py-16 md:py-24), only page title + subtitle or breadcrumb. Inner page hero should NEVER match home hero height. KavaBAR v1: all pages had full-height heroes.
+
+### Button Visibility
+- Secondary/ghost buttons MUST be visible on their section background. On accent background: use `bg-white text-accent` or `bg-background text-foreground`, NOT `bg-transparent text-white border-white` if text blends with bg. Always mentally test: is this button readable ON this specific section background? KavaBAR v1: white ghost button invisible on light accent CTA section.
+
+### Carousel Layout Stability
+- Carousel/slider containers MUST have fixed height based on the tallest possible item. Content below the carousel must NOT shift when slides change. Solutions: (a) set min-h on carousel wrapper, (b) use line-clamp to equalize text length, (c) use fixed-height cards. KavaBAR v1: testimonial carousel caused layout jump on every slide.
+
+### Dark Section Visual Interest
+- Large dark/colored sections need visual interest beyond solid background color. Add at least one: subtle texture/pattern overlay at low opacity, decorative SVG elements (large quote marks for testimonials, icons for features), gradient instead of flat color, or floating shapes. A large solid-color section looks empty and unfinished. KavaBAR v1: plain brown testimonials section looked cheap.
+
+### Technical
 - project.config.ts MUST use `export default { ... }` with real component imports, NOT string references like `component: 'Home'`. Styles import via `?inline`. KavaBAR v1.
-- NEVER use single quotes for strings containing apostrophes (Ukrainian "п'ється", "об'єкт", etc.) — use double quotes or template literals. KavaBAR v1: MenuGridSection broke on apostrophe.
-- All `<Link to="...">` MUST use ProjectLink from `@/core/lib/project-context.tsx` — NOT react-router-dom Link directly. Direct Link creates paths like /menu instead of /project/{id}/menu → white screen. Same for useLocation → use useProjectLocation. KavaBAR v1: 7 files had wrong imports.
+- NEVER use single quotes for strings containing Ukrainian apostrophes (п'ється, об'єкт, м'який, etc.) — use double quotes or template literals. KavaBAR v1: MenuGridSection broke on apostrophe in п'ється.
+- All navigation links MUST use ProjectLink from @/core/lib/project-context.tsx — NOT react-router-dom Link directly. Direct Link creates wrong paths (/menu instead of /project/{id}/menu). Same for useLocation → useProjectLocation. KavaBAR v1: 7 files had wrong imports.
 
 ---
 

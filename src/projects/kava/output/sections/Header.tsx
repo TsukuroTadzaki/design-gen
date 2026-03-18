@@ -1,9 +1,11 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, type FormEvent } from 'react'
 import { ProjectLink as Link, useProjectLocation } from '@/core/lib/project-context'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Calendar, Clock, Users, CheckCircle } from 'lucide-react'
 import { Button } from '@/core/ui/Button'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/core/ui/Dialog'
+import { Input } from '@/core/ui/Input'
 
 const navLinks = [
   { label: 'Меню', to: '/menu' },
@@ -14,7 +16,18 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isBookingOpen, setIsBookingOpen] = useState(false)
+  const [isBookingSubmitted, setIsBookingSubmitted] = useState(false)
   const location = useProjectLocation()
+
+  const handleBookingSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    setIsBookingSubmitted(true)
+    setTimeout(() => {
+      setIsBookingOpen(false)
+      setIsBookingSubmitted(false)
+    }, 2500)
+  }
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 50)
@@ -112,10 +125,10 @@ export default function Header() {
               <span className="hidden xl:inline">+380 (XX) XXX-XX-XX</span>
             </a>
             <Button
-              asChild
+              onClick={() => setIsBookingOpen(true)}
               className="rounded-full bg-accent px-6 py-2 text-sm font-medium text-accent-foreground shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
             >
-              <Link to="/contacts">Забронювати столик</Link>
+              Забронювати столик
             </Button>
           </div>
 
@@ -199,15 +212,65 @@ export default function Header() {
                 <span className="text-sm font-medium">+380 (XX) XXX-XX-XX</span>
               </a>
               <Button
-                asChild
+                onClick={() => { setIsMobileMenuOpen(false); setIsBookingOpen(true) }}
                 className="w-full rounded-full bg-accent px-10 py-4 text-base font-medium text-accent-foreground shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
               >
-                <Link to="/contacts">Забронювати столик</Link>
+                Забронювати столик
               </Button>
             </div>
           </div>
         </div>
       </div>
+      {/* Booking Modal */}
+      <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
+        <DialogContent className="sm:max-w-md rounded-2xl">
+          <DialogHeader>
+            <DialogTitle className="font-serif text-2xl">Забронювати столик</DialogTitle>
+            <DialogDescription>Ми передзвонимо протягом 15 хвилин для підтвердження</DialogDescription>
+          </DialogHeader>
+
+          {isBookingSubmitted ? (
+            <div className="flex flex-col items-center gap-4 py-8">
+              <CheckCircle className="h-12 w-12 text-accent" />
+              <p className="text-center text-lg font-medium">Дякуємо! Ми скоро зателефонуємо.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleBookingSubmit} className="flex flex-col gap-4 pt-2">
+              <div className="flex flex-col gap-2">
+                <label htmlFor="booking-name" className="text-sm font-medium">Ваше ім'я</label>
+                <Input id="booking-name" placeholder="Ім'я" required />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="booking-phone" className="text-sm font-medium">Телефон</label>
+                <Input id="booking-phone" type="tel" placeholder="+380" required />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="booking-date" className="text-sm font-medium flex items-center gap-1.5">
+                    <Calendar className="h-3.5 w-3.5" /> Дата
+                  </label>
+                  <Input id="booking-date" type="date" required />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="booking-time" className="text-sm font-medium flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" /> Час
+                  </label>
+                  <Input id="booking-time" type="time" required />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="booking-guests" className="text-sm font-medium flex items-center gap-1.5">
+                  <Users className="h-3.5 w-3.5" /> Кількість гостей
+                </label>
+                <Input id="booking-guests" type="number" min="1" max="20" defaultValue="2" required />
+              </div>
+              <Button type="submit" className="mt-2 w-full rounded-full bg-accent py-3 text-accent-foreground hover:bg-accent/90">
+                Забронювати
+              </Button>
+            </form>
+          )}
+        </DialogContent>
+      </Dialog>
     </header>
   )
 }

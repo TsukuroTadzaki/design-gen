@@ -50,3 +50,34 @@ You are generating ONE React section component.
 15. Use animation classes from styles.css where appropriate (animate-float, stagger-N, fade-in-up)
 16. For internal navigation links: use `import { ProjectLink as Link } from '@/core/lib/project-context'` — NEVER use `Link` from `react-router-dom` directly. ProjectLink automatically prefixes paths with the project base URL.
 17. For Header/Footer with active nav state: use `import { ProjectLink as Link, useProjectLocation } from '@/core/lib/project-context'` instead of `useLocation` from react-router-dom. useProjectLocation returns paths relative to the project (e.g., "/menu" not "/project/kava/menu").
+
+## Section-Specific Checks
+
+Before outputting code for this section, verify:
+
+### If this is a Hero section:
+- Add pt-20 (or header height equivalent) if header is fixed/sticky
+- If header is transparent: ensure hero has dark area at top OR add gradient overlay for nav readability
+- If this is an INNER PAGE hero (not home): make it compact (py-16 md:py-24, title + subtitle only, NO full-height, NO min-h-screen)
+
+### If this section has CTA buttons that reference forms:
+- Check design.json — does this project have booking/callback/contact forms?
+- If yes: implement Dialog or Sheet with actual form (fields, submit handler, success state)
+- Wire the CTA button to open the Dialog: onClick or DialogTrigger
+
+### If this section has dark or colored background:
+- Do NOT leave it as flat solid color
+- Add at least one: subtle texture overlay, decorative SVG element, gradient variation, or floating shapes at low opacity
+
+### If this section uses a carousel/slider:
+- Set fixed min-height on the carousel container based on tallest expected item
+- Content below must not shift on slide change
+
+### If this section has buttons:
+- Verify EACH button is readable on this section's background
+- Primary button: bg-accent text-white — check on dark AND light bg
+- Secondary button: if section bg is accent — use bg-white text-accent, NOT ghost/transparent
+
+### All sections:
+- Use ProjectLink from @/core/lib/project-context.tsx for navigation, NOT Link from react-router-dom
+- Use double quotes for any Ukrainian text containing apostrophes
