@@ -1,0 +1,700 @@
+{
+  "id": "barkas",
+  "created_at": "2026-03-17T15:00:00Z",
+  "status": "structured",
+  "global": {
+    "header": {
+      "elements": ["logo", "navigation", "search", "wishlist-icon", "compare-icon", "cart-icon", "phone", "cta-button"],
+      "cta_text": "Отримати консультацію",
+      "phone": "+380 (XX) XXX-XX-XX",
+      "behavior": "sticky"
+    },
+    "footer": {
+      "columns": [
+        "Каталог: Надувні човни, RIB-човни, Алюмінієві човни, Мотори, Ехолоти, Аксесуари",
+        "Покупцям: Доставка і оплата, Гарантія, Повернення, Акції",
+        "Компанія: Про нас, Новини, Контакти",
+        "Контакти: Телефон, Viber/Telegram, Email, Графік роботи"
+      ],
+      "cta": true
+    },
+    "floating_elements": ["scroll-to-top", "callback-button", "chat-widget"]
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "name": "Головна",
+      "role_in_funnel": "Головна точка входу. Проводить відвідувача через воронку: увага (hero) → інтерес (переваги, категорії) → бажання (процес, відгуки, FAQ) → дія (CTA). Конвертує в каталог або консультацію.",
+      "sections": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "purpose": "Захопити увагу, передати головну цінність — човни та обладнання за цінами виробника з професійним підбором",
+          "content_source": "design.json → pages[0].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "home-advantages",
+          "type": "advantages",
+          "purpose": "Побудувати довіру через 5 ключових переваг: ціни від виробника, комплектація під ключ, досвідчені консультанти, асортимент, знижки",
+          "content_source": "design.json → pages[0].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "home-categories",
+          "type": "categories",
+          "purpose": "Швидкий візуальний вхід в каталог через 6 основних категорій з цінами «від»",
+          "content_source": "design.json → pages[0].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "home-featured-products",
+          "type": "featured_products",
+          "purpose": "Показати конкретні популярні товари з реальними цінами — відчуття реального магазину",
+          "content_source": "design.json → pages[0].sections[3].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "home-how-it-works",
+          "type": "how_it_works",
+          "purpose": "Зняти страх складності: 4 кроки від вибору до виходу на воду",
+          "content_source": "design.json → pages[0].sections[4].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "home-testimonials",
+          "type": "testimonials",
+          "purpose": "Соціальний доказ: 3 реальні історії — новачок, досвідчений, B2B-клієнт",
+          "content_source": "design.json → pages[0].sections[5].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "home-brands",
+          "type": "brands",
+          "purpose": "Підсилити довіру через логотипи офіційних партнерів-виробників",
+          "content_source": "design.json → pages[0].sections[6].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-faq",
+          "type": "faq",
+          "purpose": "Закрити 5 ключових заперечень: вибір, ціна, модель, повернення, доставка",
+          "content_source": "design.json → pages[0].sections[7].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "home-cta",
+          "type": "cta",
+          "purpose": "Фінальний заклик: каталог або консультація для тих хто дочитав до кінця",
+          "content_source": "design.json → pages[0].sections[8].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "catalog",
+      "name": "Каталог",
+      "role_in_funnel": "Головна точка входу до товарів. Направляє в потрібну категорію через візуальну сітку або пошук. Конвертує в перегляд конкретної категорії.",
+      "sections": [
+        {
+          "id": "catalog-hero",
+          "type": "hero",
+          "purpose": "Орієнтація: користувач в каталозі, може обрати категорію або скористатися пошуком",
+          "content_source": "design.json → pages[1].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "catalog-categories-grid",
+          "type": "categories_grid",
+          "purpose": "Візуальна сітка з 8 основних категорій товарів з іконками та кількістю товарів",
+          "content_source": "design.json → pages[1].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "catalog-promo-banner",
+          "type": "promo_banner",
+          "purpose": "Привернути увагу до комплектних пропозицій зі знижкою до 10%",
+          "content_source": "design.json → pages[1].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "catalog-cta",
+          "type": "cta",
+          "purpose": "Запасний варіант для тих хто не знайшов категорію — направити на консультацію",
+          "content_source": "design.json → pages[1].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "category",
+      "name": "Категорія товарів",
+      "role_in_funnel": "Шаблонна сторінка категорії. Відображає товари з фільтрацією та сортуванням. Конвертує в перегляд картки товару або додавання в кошик.",
+      "sections": [
+        {
+          "id": "category-breadcrumbs-header",
+          "type": "breadcrumbs_and_header",
+          "purpose": "Навігація та орієнтація: де я, скільки товарів доступно, опис категорії",
+          "content_source": "design.json → pages[2].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "category-filters",
+          "type": "filters_and_sorting",
+          "purpose": "Фільтри за брендом, типом, місцями, довжиною, ціною, наявністю + сортування",
+          "content_source": "design.json → pages[2].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "category-product-grid",
+          "type": "product_grid",
+          "purpose": "Основна сітка карток товарів з фото, характеристиками, ціною та кнопками дій",
+          "content_source": "design.json → pages[2].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "category-description",
+          "type": "category_description",
+          "purpose": "SEO-текст з порадами по вибору для тих хто прокрутив увесь список",
+          "content_source": "design.json → pages[2].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "category-cta",
+          "type": "cta",
+          "purpose": "Альтернативний шлях для тих хто не знайшов потрібну модель",
+          "content_source": "design.json → pages[2].sections[4].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "product",
+      "name": "Картка товару",
+      "role_in_funnel": "Детальна інформація про товар. Головна задача — конвертувати в покупку або додавання в кошик. Допоміжна — допродаж аксесуарів.",
+      "sections": [
+        {
+          "id": "product-breadcrumbs",
+          "type": "breadcrumbs",
+          "purpose": "Навігація по каталогу: Головна → Каталог → Категорія → Товар",
+          "content_source": "design.json → pages[3].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "product-main",
+          "type": "product_main",
+          "purpose": "Головний блок: галерея фото, ціна, характеристики, наявність, кнопки покупки",
+          "content_source": "design.json → pages[3].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "product-tabs",
+          "type": "product_tabs",
+          "purpose": "Детальна інформація: опис, повні характеристики, відгуки, умови доставки",
+          "content_source": "design.json → pages[3].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "product-related-accessories",
+          "type": "related_accessories",
+          "purpose": "Допродаж сумісних аксесуарів: мотор, жилети, весла, насос, тент, якір",
+          "content_source": "design.json → pages[3].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "product-recently-viewed",
+          "type": "recently_viewed",
+          "purpose": "Карусель раніше переглянутих товарів для зручного порівняння",
+          "content_source": "design.json → pages[3].sections[4].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "product-cta",
+          "type": "cta",
+          "purpose": "Альтернатива для тих хто сумнівається — направити на консультацію",
+          "content_source": "design.json → pages[3].sections[5].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "cart",
+      "name": "Кошик",
+      "role_in_funnel": "Проміжний крок перед оформленням. Перегляд, редагування кількості, допродаж аксесуарів. Конвертує в оформлення замовлення.",
+      "sections": [
+        {
+          "id": "cart-header",
+          "type": "cart_header",
+          "purpose": "Підтвердження що користувач в кошику, кількість товарів",
+          "content_source": "design.json → pages[4].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "cart-items",
+          "type": "cart_items",
+          "purpose": "Список товарів з фото, цінами, кількістю, кнопками редагування та підсумком",
+          "content_source": "design.json → pages[4].sections[1].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "cart-recommended",
+          "type": "recommended",
+          "purpose": "Допродаж: 3-4 аксесуари що часто купують разом з товарами в кошику",
+          "content_source": "design.json → pages[4].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "cart-cta",
+          "type": "cta",
+          "purpose": "Фінальний заклик оформити замовлення або продовжити покупки",
+          "content_source": "design.json → pages[4].sections[1].content.summary",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "checkout",
+      "name": "Оформлення замовлення",
+      "role_in_funnel": "Фінальний крок воронки. Збір даних для відправки. Мінімум відволікань, максимум зрозумілості. Конвертує в підтвердження замовлення.",
+      "sections": [
+        {
+          "id": "checkout-header",
+          "type": "checkout_header",
+          "purpose": "Прогрес-бар: 4 кроки оформлення, орієнтація на якому етапі",
+          "content_source": "design.json → pages[5].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "checkout-form",
+          "type": "checkout_form",
+          "purpose": "Форма: контактні дані, вибір доставки (3 варіанти), вибір оплати (3 варіанти), коментар",
+          "content_source": "design.json → pages[5].sections[1].content",
+          "funnel_stage": "action",
+          "background": "muted"
+        },
+        {
+          "id": "checkout-summary",
+          "type": "order_summary_sidebar",
+          "purpose": "Бокова панель з переліком товарів, сумою та вартістю доставки",
+          "content_source": "design.json → pages[5].sections[2].content",
+          "funnel_stage": "action",
+          "background": "light"
+        },
+        {
+          "id": "checkout-cta",
+          "type": "cta",
+          "purpose": "Кнопка підтвердження замовлення та контакт для запитань щодо оформлення",
+          "content_source": "design.json → pages[5].sections[1].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "thank-you",
+      "name": "Подяка за замовлення",
+      "role_in_funnel": "Post-conversion. Підтвердження замовлення, зменшення тривожності, інструкція що далі. Вторинна конверсія — допродаж аксесуарів.",
+      "sections": [
+        {
+          "id": "thank-you-confirmation",
+          "type": "confirmation",
+          "purpose": "Чітке підтвердження: замовлення прийнято, номер, очікуйте дзвінок за 30 хв",
+          "content_source": "design.json → pages[6].sections[0].content",
+          "funnel_stage": "action",
+          "background": "light"
+        },
+        {
+          "id": "thank-you-next-steps",
+          "type": "next_steps",
+          "purpose": "3 кроки що далі: дзвінок менеджера, SMS з ТТН, отримання та перевірка",
+          "content_source": "design.json → pages[6].sections[1].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "thank-you-cta",
+          "type": "cta",
+          "purpose": "Допродаж: перевірте чи не забули жилет, якір, насос. Або повернення на головну.",
+          "content_source": "design.json → pages[6].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "wishlist",
+      "name": "Улюблені товари",
+      "role_in_funnel": "Утримання інтересу. Збережені товари для повернення та покупки пізніше. Конвертує в додавання до кошика.",
+      "sections": [
+        {
+          "id": "wishlist-header",
+          "type": "header",
+          "purpose": "Заголовок, підзаголовок, empty state з CTA на каталог",
+          "content_source": "design.json → pages[7].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "wishlist-product-grid",
+          "type": "product_grid",
+          "purpose": "Сітка збережених товарів з кнопками «В кошик» та «Видалити»",
+          "content_source": "design.json → pages[7].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "wishlist-cta",
+          "type": "cta",
+          "purpose": "Направити до каталогу для продовження вибору або на консультацію",
+          "content_source": "design.json → cta_strategy",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "compare",
+      "name": "Порівняння товарів",
+      "role_in_funnel": "Допомога у прийнятті рішення. Порівняння характеристик 2-4 товарів. Конвертує в додавання обраного товару в кошик.",
+      "sections": [
+        {
+          "id": "compare-header",
+          "type": "header",
+          "purpose": "Заголовок, інструкція, empty state з CTA на каталог",
+          "content_source": "design.json → pages[8].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "compare-table",
+          "type": "comparison_table",
+          "purpose": "Таблиця порівняння: фото, ціна, характеристики рядок за рядком, підсвітка різниць",
+          "content_source": "design.json → pages[8].sections[1].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "compare-cta",
+          "type": "cta",
+          "purpose": "Не можете визначитись — зверніться до консультанта для персональної поради",
+          "content_source": "design.json → cta_strategy",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "promotions",
+      "name": "Акції",
+      "role_in_funnel": "Стимулювання покупки через обмежені пропозиції. Збирає всі акції в одному місці. Конвертує в перегляд акційних товарів або підписку.",
+      "sections": [
+        {
+          "id": "promotions-hero",
+          "type": "hero",
+          "purpose": "Привернути увагу до головної акції, підкреслити обмеженість пропозицій",
+          "content_source": "design.json → pages[9].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "promotions-promo-grid",
+          "type": "promo_grid",
+          "purpose": "Сітка акцій: комплект «Рибалка» -10%, розпродаж аксесуарів -25%, безкоштовна доставка",
+          "content_source": "design.json → pages[9].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "promotions-cta",
+          "type": "cta",
+          "purpose": "Підписка на розсилку з акціями — не частіше 2 разів на місяць",
+          "content_source": "design.json → pages[9].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "news",
+      "name": "Новини",
+      "role_in_funnel": "SEO-трафік та експертний імідж. Корисний контент: огляди, поради, новинки. Конвертує читача в покупця через статті з посиланнями на товари.",
+      "sections": [
+        {
+          "id": "news-header",
+          "type": "header",
+          "purpose": "Позиціонування блогу як джерела корисної інформації про водну техніку",
+          "content_source": "design.json → pages[10].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "news-featured-article",
+          "type": "featured_article",
+          "purpose": "Виділити головну статтю — гід по вибору першого човна для новачків",
+          "content_source": "design.json → pages[10].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "news-articles-grid",
+          "type": "articles_grid",
+          "purpose": "Список усіх статей з фільтрацією за категоріями та пагінацією",
+          "content_source": "design.json → pages[10].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "news-cta",
+          "type": "cta",
+          "purpose": "Направити читача до каталогу або на консультацію",
+          "content_source": "design.json → cta_strategy",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "news-article",
+      "name": "Сторінка новини",
+      "role_in_funnel": "Конвертувати читача в покупця через корисний контент з посиланнями на конкретні товари. Утримати на сайті через пов'язані статті.",
+      "sections": [
+        {
+          "id": "news-article-header",
+          "type": "article_header",
+          "purpose": "Breadcrumbs, заголовок, дата, автор, час читання, головне зображення",
+          "content_source": "design.json → pages[11].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "news-article-body",
+          "type": "article_body",
+          "purpose": "Повний текст статті з підзаголовками, фото, таблицями порівняння",
+          "content_source": "design.json → pages[11].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "news-article-related-products",
+          "type": "related_products",
+          "purpose": "3-4 картки товарів, згадані у статті, з цінами та кнопкою «В кошик»",
+          "content_source": "design.json → pages[11].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "news-article-related-articles",
+          "type": "related_articles",
+          "purpose": "3 релевантні статті для утримання читача на сайті",
+          "content_source": "design.json → pages[11].sections[3].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "news-article-cta",
+          "type": "cta",
+          "purpose": "Конвертувати читача: перейти до каталогу або отримати консультацію",
+          "content_source": "design.json → pages[11].sections[4].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "name": "Про нас",
+      "role_in_funnel": "Побудова довіри через історію, цінності та цифри. Показати людей за брендом. Конвертує довіру в контакт або перехід до каталогу.",
+      "sections": [
+        {
+          "id": "about-hero",
+          "type": "hero",
+          "purpose": "Коротко: хто ми — мультибрендовий магазин з професійною командою",
+          "content_source": "design.json → pages[12].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "about-story",
+          "type": "story",
+          "purpose": "Емоційний зв'язок: історія створення Barkas, місія, фото команди",
+          "content_source": "design.json → pages[12].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "about-values",
+          "type": "values",
+          "purpose": "3 принципи: чесна ціна, експертність з досвіду, підтримка після покупки",
+          "content_source": "design.json → pages[12].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "about-numbers",
+          "type": "numbers",
+          "purpose": "Цифри як доказ масштабу: 500+ моделей, 15+ брендів, 10 000+ клієнтів, 5+ років",
+          "content_source": "design.json → pages[12].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "about-cta",
+          "type": "cta",
+          "purpose": "Перевести довіру в дію: зателефонувати або написати",
+          "content_source": "design.json → pages[12].sections[4].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "delivery-payment",
+      "name": "Доставка і оплата",
+      "role_in_funnel": "Зняття тривожності перед замовленням. Прозора інформація про доставку (3 варіанти) та оплату (3 варіанти). Зменшує відсоток покинутих кошиків.",
+      "sections": [
+        {
+          "id": "delivery-payment-header",
+          "type": "header",
+          "purpose": "Чіткий заголовок сторінки: прозорі умови без прихованих платежів",
+          "content_source": "design.json → pages[13].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "delivery-payment-delivery",
+          "type": "delivery_options",
+          "purpose": "3 варіанти доставки: НП відділення, НП адресна, габаритні вантажі. Терміни та умови.",
+          "content_source": "design.json → pages[13].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "delivery-payment-payment",
+          "type": "payment_options",
+          "purpose": "3 варіанти оплати: при отриманні, на карту, безготівковий для юросіб",
+          "content_source": "design.json → pages[13].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "delivery-payment-cta",
+          "type": "cta",
+          "purpose": "Зв'язок для уточнення умов нестандартних або великих замовлень",
+          "content_source": "design.json → pages[13].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "warranty",
+      "name": "Гарантія",
+      "role_in_funnel": "Зняття побоювань щодо покупки дорогих товарів. Чіткі гарантійні умови та простий процес повернення. Підсилює довіру.",
+      "sections": [
+        {
+          "id": "warranty-header",
+          "type": "header",
+          "purpose": "Заспокоїти одразу: офіційна гарантія виробника, прозорі умови повернення",
+          "content_source": "design.json → pages[14].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "warranty-info",
+          "type": "warranty_info",
+          "purpose": "3 блоки: офіційна гарантія, гарантійне обслуговування, повернення 14 днів",
+          "content_source": "design.json → pages[14].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "warranty-return-process",
+          "type": "return_process",
+          "purpose": "4 кроки повернення: зв'язок → інструкції → відправка → кошти за 3-5 днів",
+          "content_source": "design.json → pages[14].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "warranty-cta",
+          "type": "cta",
+          "purpose": "Зв'язок для гарантійних питань: зателефонувати або написати",
+          "content_source": "design.json → pages[14].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "contacts",
+      "name": "Контакти",
+      "role_in_funnel": "Фінальна точка конверсії для тих хто готовий зв'язатися. Всі канали зв'язку: телефон, Viber/Telegram, email, форма, зворотній дзвінок.",
+      "sections": [
+        {
+          "id": "contacts-header",
+          "type": "header",
+          "purpose": "Заголовок та запрошення зв'язатися будь-яким зручним способом",
+          "content_source": "design.json → pages[15].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "light"
+        },
+        {
+          "id": "contacts-info",
+          "type": "contact_info",
+          "purpose": "Канали зв'язку: телефон, Viber/Telegram, email + графік роботи",
+          "content_source": "design.json → pages[15].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "contacts-form",
+          "type": "contact_form",
+          "purpose": "Форма зворотного зв'язку: ім'я, телефон/email, повідомлення",
+          "content_source": "design.json → pages[15].sections[2].content",
+          "funnel_stage": "action",
+          "background": "light"
+        },
+        {
+          "id": "contacts-callback",
+          "type": "callback_form",
+          "purpose": "Замовити зворотній дзвінок — зателефонуємо за 30 хвилин",
+          "content_source": "design.json → pages[15].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    }
+  ],
+  "background_rhythm": {
+    "strategy": "Чергування dark → light → muted → light → muted → dark для уникнення монотонності. Hero-секції використовують dark. CTA-секції завжди accent. Контентні секції чергують light та muted. Testimonials та numbers використовують dark для контрасту. Жодні дві сусідні секції не мають однаковий фон."
+  }
+}

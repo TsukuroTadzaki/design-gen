@@ -1,0 +1,209 @@
+{
+  "id": "kava",
+  "created_at": "2026-03-17T13:30:00.000Z",
+  "status": "planned",
+  "plan_version": 1,
+  "style": {
+    "preset_id": "SP-08",
+    "preset_name": "Warm Organic",
+    "why": "KavaBAR — камерний кава-бар з теплою кавовою палітрою (#4A2C2A primary, #D4B896 secondary, #FAF6F1 background), органічними текстурами та мʼякими формами. SP-08 ідеально збігається: serif заголовки підкреслять вишуканість кавової культури, rounded-2xl форми створюють затишок, organic wave dividers підсилюють плавність і спокій. Best for: 'restaurants, cafes, bakeries' — пряме попадання. Відкинуто SP-07 Scandinavian: занадто прохолодний і нордичний, KavaBAR потребує теплоти та насиченості. Відкинуто SP-14 Photographic: занадто залежний від фото, KavaBAR — це баланс атмосфери і контенту (меню, події). Відкинуто SP-02 Minimalist: надто холодний і порожній для закладу, що будує емоційний звʼязок через затишок і живу сцену.",
+    "tokens": {
+      "border_radius": "rounded-2xl to rounded-full (16px to full pill shapes)",
+      "shadows": "shadow-md with warm tone",
+      "heading_weight": "font-semibold",
+      "heading_style": "serif (elegant but readable)",
+      "body_weight": "font-normal to font-light",
+      "spacing": "py-20 md:py-32 (generous, breathing)",
+      "card_style": "bg-card rounded-2xl shadow-md p-8 border border-border",
+      "button_primary": "bg-accent text-white rounded-full px-10 py-4 font-medium",
+      "button_secondary": "bg-transparent border border-primary text-primary rounded-full px-10 py-4",
+      "hover_effect": "scale-[1.03] + warm shadow increase",
+      "decorative": "organic blob shapes, subtle paper/grain textures at low opacity, hand-drawn line accents",
+      "backgrounds": "warm whites → cream → warm dark alternation",
+      "section_transitions": "organic wave SVG dividers or smooth gradient fades"
+    }
+  },
+  "header": {
+    "pattern_id": "HD-02",
+    "pattern_name": "Transparent Scroll-Reactive",
+    "why": "structure.json визначає 'sticky, transparent-on-hero → solid-on-scroll' — це точний опис HD-02. Усі 4 сторінки починаються з dark hero, тому прозорий хедер дозволяє hero-зображенням KavaBAR (інтерʼєр з приглушеним світлом, кавове обладнання) працювати на повну без візуального конфлікту. Кнопка 'Забронювати столик' завжди видима у хедері — ключова для конверсії ресторанного бізнесу."
+  },
+  "footer": {
+    "pattern_id": "FT-04",
+    "pattern_name": "Contact-Focused Service Footer",
+    "why": "KavaBAR — локальний заклад, де головна конверсія — фізичний візит. FT-04 виносить контактну інформацію (телефон, адреса, графік, email) в окрему помітну колонку — саме те, що потрібно для ресторанного бізнесу. Відвідувач бачить 'Пн-Нд 09:00-23:00, Чт/Сб до 00:00' і телефон без пошуку. 4 колонки зі structure.json (бренд, навігація, графік, контакти) ідеально лягають у цей патерн."
+  },
+  "sections": [
+    {
+      "id": "home-hero",
+      "type": "hero",
+      "pattern_id": "H-04",
+      "pattern_name": "Full-Bleed Photo with Overlay",
+      "why": "Для кава-бару атмосфера — це головний продукт. H-04 дозволяє full-bleed фото інтерʼєру (приглушене тепле світло, барна стійка, камерна сцена) заповнити екран з темним gradient overlay знизу для тексту. Headline 'Зупинись. Вдихни аромат.' працює як кінематографічний overlay — відвідувач відразу відчуває настрій закладу. Контент мінімальний (headline + subheadline + 2 CTA) — ідеально для H-04.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[0].content"
+    },
+    {
+      "id": "home-advantages",
+      "type": "advantages",
+      "pattern_id": "F-01",
+      "pattern_name": "Symmetric Card Grid",
+      "why": "5 переваг KavaBAR (світова кава, камерність, жива сцена, коктейлі, десерти) мають рівну вагу — жодна не домінує. F-01 дає кожній перевазі однаковий простір: icon + title + description у 5 рівних картках. На desktop — 3+2 або 5 в ряд, на mobile — стек. 5 items потрапляє в діапазон 4-6 для F-01. Warm Organic стиль додасть rounded-2xl картки з shadow-md і serif заголовки.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[1].content"
+    },
+    {
+      "id": "home-services",
+      "type": "services",
+      "pattern_id": "SV-02",
+      "pattern_name": "Alternating Detail Showcase",
+      "why": "4 послуги KavaBAR (кава, коктейлі, десерти, тематичні вечори) заслуговують на деталізовану подачу — кожна має icon, опис і власну CTA. SV-02 чергує фото зліва/справа для кожної послуги, створюючи ритм сторінки. 4 items ідеально входить у діапазон 3-6. Для кава-бару кожна категорія — це візуальна історія (фото кави крупним планом, коктейль, десерт, сцена), а SV-02 дає простір для великих фото. Не SV-01 (grid) — 4 однакових картки виглядали б як каталог, а не як запрошення.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[2].content"
+    },
+    {
+      "id": "home-how-it-works",
+      "type": "how_it_works",
+      "pattern_id": "W-01",
+      "pattern_name": "Horizontal Step Grid with Connector",
+      "why": "3 кроки бронювання (заявка → дзвінок менеджера → візит) — класичний лінійний процес. W-01 ідеальний для 3-4 кроків: горизонтальна лінія зʼєднує кроки візуально, показуючи простоту процесу. Для KavaBAR важливо зняти страх складності бронювання — 3 простих кроки в один ряд комунікують 'це легко'. Не W-02 (zigzag timeline) — занадто складний для 3 кроків.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[3].content"
+    },
+    {
+      "id": "home-testimonials",
+      "type": "testimonials",
+      "pattern_id": "T-02",
+      "pattern_name": "Large Avatar Hero",
+      "why": "3 відгуки від різних типів гостей (пара, бізнес-зустріч, сімʼя) — це персональні історії, де важливо бачити людину. T-02 з великими аватарами (120-192px) робить відгуки особистими і довірливими — відвідувач бачить обличчя людини, а не абстрактну цитату. 3 items потрапляє в діапазон 3-4. Best for: 'personal services, wellness, premium brands' — камерний кава-бар = premium personal service. Dark background підсилить кінематографічність.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[4].content"
+    },
+    {
+      "id": "home-events",
+      "type": "upcoming_events",
+      "pattern_id": "EV-01",
+      "pattern_name": "Event List with Metadata",
+      "why": "На головній сторінці показуємо 2-3 найближчі події (не повний розклад). EV-01 — хронологічний список з date badge, назвою, описом та кнопкою бронювання на кожній картці. Формат горизонтального flex-рядка ідеальний для швидкого сканування дат. Не EV-02 (card grid з фільтрами) — на головній не потрібна фільтрація, потрібен компактний preview подій з CTA 'Дивитись всі події'.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[5].content"
+    },
+    {
+      "id": "home-faq",
+      "type": "faq",
+      "pattern_id": "Q-01",
+      "pattern_name": "Single-Column Accordion",
+      "why": "4 запитання — компактний FAQ, який не потребує категорій чи табів. Q-01 — універсальний акордеон, знайомий усім користувачам. Питання розкриваються/згортаються вертикально, не займаючи зайвий простір. 4 items — нижче порогу для Q-02 (categorized, потребує 4-6 категорій). Warm Organic стиль додасть rounded-2xl контейнери і serif заголовки питань.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[6].content"
+    },
+    {
+      "id": "home-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Фінальний CTA 'Ваш столик вже чекає' — одне повідомлення, два варіанти дії (бронювання + меню). C-01 фокусує увагу: centered headline + description + 2 pill-shaped кнопки. Accent background (#2A9D8F тіл) контрастує з теплою палітрою, створюючи візуальний акцент. Не C-02 (form + sidebar) — тут не форма, а заклик до дії.",
+      "background": "accent",
+      "content_source": "design.json → pages[0].sections[7].content"
+    },
+    {
+      "id": "menu-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Сторінка меню починається з мінімального hero: headline 'Наше меню' + subheadline + фільтри-таби нижче. Тут не потрібна велика фотографія — фото будуть у картках меню. H-02 центрує текст з floating organic shapes (кавові зерна, хвилі) у стилі Warm Organic. Відрізняється від home-hero (H-04) — інша сторінка, інший підхід.",
+      "background": "dark",
+      "content_source": "design.json → pages[1].sections[0].content"
+    },
+    {
+      "id": "menu-grid",
+      "type": "menu_grid",
+      "pattern_id": "SV-03",
+      "pattern_name": "Category Tab Filter",
+      "why": "Меню KavaBAR має 4 категорії (Кава, Алкогольні коктейлі, Безалкогольні, Десерти) з фільтрами-табами. SV-03 точно відповідає: горизонтальна панель filter pills зверху + сітка карток нижче, що оновлюється при перемиканні категорій. По кліку на картку — дровер з деталями (фото, склад, алергени, рекомендована пара). 4 категорії × 3+ позицій — ідеальний обсяг для SV-03.",
+      "background": "light",
+      "content_source": "design.json → pages[1].sections[1].content"
+    },
+    {
+      "id": "menu-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Після перегляду меню — простий заклик 'Вже обрали? Забронюйте столик'. C-01 — мінімальний focused CTA: headline + description + 2 кнопки (бронювання + телефон). Не ускладнювати після детального каталогу.",
+      "background": "accent",
+      "content_source": "design.json → pages[1].sections[2].content"
+    },
+    {
+      "id": "events-hero",
+      "type": "hero",
+      "pattern_id": "H-01",
+      "pattern_name": "Two-Column Split",
+      "why": "Сторінка подій потребує баланс тексту і візуалу: ліва колонка — headline 'Більше, ніж кава' + subheadline про четверги/суботи + CTA бронювання; права — атмосферне фото з живого виступу (зосереджені обличчя, камерна сцена). H-01 дає рівну вагу тексту та зображенню. Відрізняється від H-04 (home) і H-02 (menu) — кожна сторінка має унікальний hero.",
+      "background": "dark",
+      "content_source": "design.json → pages[2].sections[0].content"
+    },
+    {
+      "id": "events-schedule",
+      "type": "events_schedule",
+      "pattern_id": "EV-02",
+      "pattern_name": "Card Grid with Category Filtering",
+      "why": "Розклад KavaBAR має 2 категорії: четверги (літературні — слово) та суботи (музика/стендап — звук). EV-02 дає filter tabs зверху для перемикання між категоріями + сітку карток подій з датою, назвою, описом виконавця та кнопкою бронювання. Кожна картка — це окрема подія з усією потрібною інформацією. 3 sample events ідеально вкладаються у формат.",
+      "background": "light",
+      "content_source": "design.json → pages[2].sections[1].content"
+    },
+    {
+      "id": "events-gallery",
+      "type": "gallery",
+      "pattern_id": "G-04",
+      "pattern_name": "Lightbox Modal Gallery",
+      "why": "Фото з минулих подій — це доказ атмосфери (камерна сцена, аплодисменти, кава в руках). G-04: thumbnail grid для огляду + lightbox modal по кліку для детального перегляду. 10-15 фото з дизайн-брифу ідеально вкладаються в діапазон 6-20. Не G-01 (masonry) — занадто хаотичний для камерної атмосфери. Не G-03 (carousel) — відвідувач хоче бачити всі фото одразу, а не гортати по одному.",
+      "background": "muted",
+      "content_source": "design.json → pages[2].sections[2].content"
+    },
+    {
+      "id": "events-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Після розкладу і галереї — фінальний заклик 'Не пропустіть наступний вечір' з акцентом на обмежену кількість місць. C-01: headline + description + 2 кнопки (бронювання + підписка на розклад).",
+      "background": "accent",
+      "content_source": "design.json → pages[2].sections[3].content"
+    },
+    {
+      "id": "contacts-hero",
+      "type": "hero",
+      "pattern_id": "H-04",
+      "pattern_name": "Full-Bleed Photo with Overlay",
+      "why": "Сторінка контактів: headline 'Завітайте до нас' + адреса, телефон, графік роботи, email — усе на фоні full-bleed фото фасаду або входу закладу. H-04 дозволяє показати зовнішній вигляд KavaBAR (щоб відвідувач впізнав заклад на вулиці) з текстовим overlay контактної інформації. Мінімальний контент — ідеально для H-04.",
+      "background": "dark",
+      "content_source": "design.json → pages[3].sections[0].content"
+    },
+    {
+      "id": "contacts-map",
+      "type": "map",
+      "pattern_id": "LO-01",
+      "pattern_name": "Full Map with Floating Card",
+      "why": "KavaBAR — один заклад, одна локація. LO-01: карта домінує секцію (full-width, tall embed) з floating card у куті (адреса + кнопка 'Прокласти маршрут'). Елегантний і сучасний підхід для single-location бізнесу. Не LO-02 (split screen) — для KavaBAR не потрібна сітка контактних карток, усе вже є в hero. Не LO-03 — одна локація, не мережа.",
+      "background": "light",
+      "content_source": "design.json → pages[3].sections[1].content"
+    },
+    {
+      "id": "contacts-socials",
+      "type": "socials",
+      "pattern_id": "SO-01",
+      "pattern_name": "Social Links Card Grid",
+      "why": "3 соцмережі (Instagram, Facebook, Telegram) — по одній картці на платформу з іконкою, назвою та кнопкою-посиланням. SO-01 — простий та чистий підхід для 3 карток. Не SO-02/SO-03 (analytics dashboard) — KavaBAR не показує метрики, а просто дає посилання для підписки.",
+      "background": "muted",
+      "content_source": "design.json → pages[3].sections[3].content"
+    },
+    {
+      "id": "contacts-booking",
+      "type": "booking_form",
+      "pattern_id": "C-02",
+      "pattern_name": "Form + Information Sidebar",
+      "why": "Форма бронювання (6 полів: імʼя, телефон, дата, час, гості, побажання) + sidebar з контактною інформацією (телефон, email, графік — для тих, хто хоче зателефонувати замість форми). C-02 дає форму зліва (60-70% ширини) + info cards справа з іконками. Accent background підкреслює, що це головна конверсійна дія сторінки. Не C-04 (multi-step wizard) — 6 полів не потребують розбиття на кроки.",
+      "background": "accent",
+      "content_source": "design.json → pages[3].sections[2].content"
+    }
+  ]
+}

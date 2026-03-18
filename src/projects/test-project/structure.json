@@ -1,0 +1,492 @@
+{
+  "id": "test-project",
+  "created_at": "2026-03-17T15:00:00.000Z",
+  "status": "structured",
+  "global": {
+    "header": {
+      "elements": ["logo", "nav-menu", "phone", "cta-button"],
+      "cta_text": "Обговорити проект",
+      "phone": "+380 (XX) XXX-XX-XX",
+      "behavior": "sticky"
+    },
+    "footer": {
+      "columns": ["Про компанію (лого, опис, соцмережі)", "Послуги (створення сайтів, SEO, маркетинг)", "Блог (останні статті)", "Контакти (телефон, email, адреса, графік)"],
+      "cta": true
+    },
+    "floating_elements": ["scroll-to-top", "callback-button"]
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "name": "Головна",
+      "role_in_funnel": "Головна точка входу. Веде відвідувача через повну воронку: привертає увагу (hero) → будує довіру (переваги) → показує послуги → демонструє процес → підтверджує соціальним доказом → знімає заперечення (FAQ) → конвертує (CTA).",
+      "sections": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "purpose": "Захопити увагу, чітко донести ціннісну пропозицію DiVotek",
+          "content_source": "design.json → pages[0].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "home-advantages",
+          "type": "advantages",
+          "purpose": "Побудувати довіру через конкретні переваги, що відповідають страхам аудиторії",
+          "content_source": "design.json → pages[0].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "home-services",
+          "type": "services",
+          "purpose": "Показати спектр послуг і направити до детальних сторінок",
+          "content_source": "design.json → pages[0].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "home-how-it-works",
+          "type": "how_it_works",
+          "purpose": "Зняти невизначеність — показати прозорий процес роботи",
+          "content_source": "design.json → pages[0].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-testimonials",
+          "type": "testimonials",
+          "purpose": "Соціальний доказ — реальні відгуки від клієнтів",
+          "content_source": "design.json → pages[0].sections[4].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "home-faq",
+          "type": "faq",
+          "purpose": "Зняти основні заперечення перед зверненням",
+          "content_source": "design.json → pages[0].sections[5].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "home-cta",
+          "type": "cta",
+          "purpose": "Фінальний заклик до дії — підштовхнути до звернення",
+          "content_source": "design.json → pages[0].sections[6].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "name": "Про нас",
+      "role_in_funnel": "Сторінка довіри. Розкриває команду, історію та цінності компанії для відвідувачів, які хочуть дізнатись більше перед зверненням.",
+      "sections": [
+        {
+          "id": "about-hero",
+          "type": "hero",
+          "purpose": "Задати тон сторінки — реальні люди з реальним досвідом",
+          "content_source": "design.json → pages[1].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "about-story",
+          "type": "story",
+          "purpose": "Розповісти історію компанії з ключовими віхами",
+          "content_source": "design.json → pages[1].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "about-values",
+          "type": "values",
+          "purpose": "Показати принципи роботи — чим DiVotek відрізняється",
+          "content_source": "design.json → pages[1].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "about-cta",
+          "type": "cta",
+          "purpose": "Направити до контакту після знайомства з компанією",
+          "content_source": "design.json → pages[1].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "contacts",
+      "name": "Контакти",
+      "role_in_funnel": "Конверсійна сторінка. Мінімум відволікань, максимум зручності для звернення через форму, телефон або месенджер.",
+      "sections": [
+        {
+          "id": "contacts-hero",
+          "type": "hero",
+          "purpose": "Простий заголовок — мінімум відволікань перед формою",
+          "content_source": "design.json → pages[2].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "contacts-form",
+          "type": "contact_form",
+          "purpose": "Головний конверсійний елемент — проста форма для заявки",
+          "content_source": "design.json → pages[2].sections[1].content",
+          "funnel_stage": "action",
+          "background": "light"
+        },
+        {
+          "id": "contacts-info",
+          "type": "contact_info",
+          "purpose": "Альтернативні способи зв'язку — телефон, email, месенджери",
+          "content_source": "design.json → pages[2].sections[2].content",
+          "funnel_stage": "action",
+          "background": "muted"
+        },
+        {
+          "id": "contacts-cta",
+          "type": "cta",
+          "purpose": "Фінальний заклик — зателефонувати, якщо форма не підходить",
+          "content_source": "design.json → cta_strategy",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "web-development",
+      "name": "Створення сайтів (категорія послуг)",
+      "role_in_funnel": "Категорійна сторінка послуг з розробки. Показує спектр типів сайтів і переваги, направляє до конкретної послуги або заявки.",
+      "sections": [
+        {
+          "id": "web-development-hero",
+          "type": "hero",
+          "purpose": "Позиціонувати напрямок розробки сайтів",
+          "content_source": "design.json → pages[3].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "web-development-services-list",
+          "type": "services_list",
+          "purpose": "Показати типи сайтів, які розробляються",
+          "content_source": "design.json → pages[3].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "web-development-advantages",
+          "type": "advantages",
+          "purpose": "Чому варто замовити розробку саме тут",
+          "content_source": "design.json → pages[3].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "web-development-cta",
+          "type": "cta",
+          "purpose": "Направити до обговорення конкретного проекту",
+          "content_source": "design.json → pages[3].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "web-development-service",
+      "name": "Сторінка послуги (створення сайтів)",
+      "role_in_funnel": "Детальна сторінка послуги. Переконує через деталізацію (що входить, етапи, строки) та соціальний доказ. Фінальна конверсія в заявку.",
+      "sections": [
+        {
+          "id": "web-development-service-hero",
+          "type": "hero",
+          "purpose": "Чітка назва послуги та ключова перевага",
+          "content_source": "design.json → pages[4].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "web-development-service-details",
+          "type": "service_details",
+          "purpose": "Детально пояснити, що входить у послугу",
+          "content_source": "design.json → pages[4].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "web-development-service-process",
+          "type": "process",
+          "purpose": "Прозорий процес роботи — зняти страх невизначеності",
+          "content_source": "design.json → pages[4].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "web-development-service-testimonials",
+          "type": "testimonials",
+          "purpose": "Релевантний відгук до послуги розробки",
+          "content_source": "design.json → pages[4].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "web-development-service-cta",
+          "type": "cta",
+          "purpose": "Конверсія — замовити розробку",
+          "content_source": "design.json → pages[4].sections[4].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "seo-marketing",
+      "name": "SEO та маркетинг (категорія послуг)",
+      "role_in_funnel": "Категорійна сторінка маркетингових послуг. Показує спектр послуг, підкріплює результатами в цифрах, направляє до аудиту.",
+      "sections": [
+        {
+          "id": "seo-marketing-hero",
+          "type": "hero",
+          "purpose": "Позиціонувати маркетингові послуги як інструмент росту",
+          "content_source": "design.json → pages[5].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "seo-marketing-services-list",
+          "type": "services_list",
+          "purpose": "Показати спектр маркетингових послуг",
+          "content_source": "design.json → pages[5].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "seo-marketing-results",
+          "type": "results",
+          "purpose": "Конкретні результати роботи в цифрах",
+          "content_source": "design.json → pages[5].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "seo-marketing-cta",
+          "type": "cta",
+          "purpose": "Направити до замовлення безкоштовного аудиту",
+          "content_source": "design.json → pages[5].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "seo-marketing-service",
+      "name": "Сторінка послуги (SEO/маркетинг)",
+      "role_in_funnel": "Детальна сторінка SEO-послуги. Показує що входить, як працює, підтверджує відгуком. Конвертує в замовлення аудиту.",
+      "sections": [
+        {
+          "id": "seo-marketing-service-hero",
+          "type": "hero",
+          "purpose": "Конкретна послуга з чіткою обіцянкою результату",
+          "content_source": "design.json → pages[6].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "seo-marketing-service-details",
+          "type": "service_details",
+          "purpose": "Деталізація — що саме отримає клієнт",
+          "content_source": "design.json → pages[6].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "seo-marketing-service-process",
+          "type": "process",
+          "purpose": "Прозорий процес SEO-роботи",
+          "content_source": "design.json → pages[6].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "seo-marketing-service-testimonials",
+          "type": "testimonials",
+          "purpose": "Релевантний відгук для SEO-послуги",
+          "content_source": "design.json → pages[6].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "seo-marketing-service-cta",
+          "type": "cta",
+          "purpose": "Конверсія — замовити SEO-аудит",
+          "content_source": "design.json → pages[6].sections[4].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "blog",
+      "name": "Блог (категорія статей)",
+      "role_in_funnel": "Контентна сторінка для залучення органічного трафіку та демонстрації експертизи. Перелінковка на послуги через CTA.",
+      "sections": [
+        {
+          "id": "blog-hero",
+          "type": "hero",
+          "purpose": "Позиціонувати блог як джерело корисної інформації",
+          "content_source": "design.json → pages[7].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "blog-articles-grid",
+          "type": "articles_grid",
+          "purpose": "Список статей з фільтрацією за категоріями",
+          "content_source": "design.json → pages[7].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "blog-cta",
+          "type": "cta",
+          "purpose": "Конверсія з блогу — записатись на консультацію",
+          "content_source": "design.json → pages[7].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "blog-article",
+      "name": "Сторінка статті блогу",
+      "role_in_funnel": "Сторінка окремої статті. Корисний контент → перелінковка на послуги та інші статті → CTA для конверсії читачів.",
+      "sections": [
+        {
+          "id": "blog-article-header",
+          "type": "article_header",
+          "purpose": "Заголовок, мета-інформація та cover-зображення",
+          "content_source": "design.json → pages[8].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "blog-article-body",
+          "type": "article_body",
+          "purpose": "Основний контент статті з форматуванням та сайдбаром",
+          "content_source": "design.json → pages[8].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "blog-article-related",
+          "type": "related_articles",
+          "purpose": "Перелінковка на інші статті для глибини перегляду",
+          "content_source": "design.json → pages[8].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "blog-article-cta",
+          "type": "cta",
+          "purpose": "Конверсія після прочитання статті",
+          "content_source": "design.json → pages[8].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "portfolio",
+      "name": "Портфоліо (категорія робіт)",
+      "role_in_funnel": "Соціальний доказ через демонстрацію реальних проектів. Фільтрація за типом дозволяє знайти релевантні кейси.",
+      "sections": [
+        {
+          "id": "portfolio-hero",
+          "type": "hero",
+          "purpose": "Позиціонувати портфоліо як доказ досвіду",
+          "content_source": "design.json → pages[9].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "portfolio-grid",
+          "type": "portfolio_grid",
+          "purpose": "Сітка проектів з фільтрацією за типом та індустрією",
+          "content_source": "design.json → pages[9].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "portfolio-cta",
+          "type": "cta",
+          "purpose": "Конверсія після перегляду портфоліо",
+          "content_source": "design.json → pages[9].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "portfolio-item",
+      "name": "Сторінка роботи (портфоліо)",
+      "role_in_funnel": "Детальний кейс проекту. Структура задача → рішення → результат переконує через конкретику та цифри.",
+      "sections": [
+        {
+          "id": "portfolio-item-hero",
+          "type": "project_hero",
+          "purpose": "Назва проекту, ключовий скріншот і базова інформація",
+          "content_source": "design.json → pages[10].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "portfolio-item-overview",
+          "type": "project_overview",
+          "purpose": "Опис задачі клієнта — з чим прийшов",
+          "content_source": "design.json → pages[10].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "portfolio-item-solution",
+          "type": "project_solution",
+          "purpose": "Конкретні рішення, які були реалізовані",
+          "content_source": "design.json → pages[10].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "portfolio-item-results",
+          "type": "project_results",
+          "purpose": "Результати в цифрах — доказ ефективності",
+          "content_source": "design.json → pages[10].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "portfolio-item-gallery",
+          "type": "project_gallery",
+          "purpose": "Скріншоти сторінок сайту",
+          "content_source": "design.json → pages[10].sections[4].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "portfolio-item-cta",
+          "type": "cta",
+          "purpose": "Конверсія після перегляду кейсу",
+          "content_source": "design.json → pages[10].sections[5].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    }
+  ],
+  "background_rhythm": {
+    "strategy": "Чергування dark → light → muted → dark/light для контентних секцій. Hero завжди dark. CTA завжди accent. Testimonials на dark для контрасту. Content-heavy секції на light/muted. Жодних двох однакових фонів поряд."
+  }
+}

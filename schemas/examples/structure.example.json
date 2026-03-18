@@ -1,0 +1,198 @@
+{
+  "id": "remka-pro",
+  "created_at": "2026-03-17T13:00:00Z",
+  "status": "structured",
+
+  "global": {
+    "header": {
+      "elements": ["logo", "navigation", "phone", "cta_button"],
+      "cta_text": "Викликати майстра",
+      "phone": "+380 XX XXX XX XX",
+      "behavior": "sticky, transparent on hero then solid on scroll"
+    },
+    "footer": {
+      "columns": ["about + contacts", "navigation", "services", "working hours"],
+      "cta": true
+    },
+    "floating_elements": ["scroll-to-top", "callback-button"]
+  },
+
+  "pages": [
+    {
+      "slug": "home",
+      "name": "Головна",
+      "role_in_funnel": "Main entry point. Converts cold traffic (search, ads) into repair requests. Must immediately communicate speed, reliability, and transparent pricing.",
+      "sections": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "purpose": "Grab attention and communicate core value: fast repair with guarantee",
+          "content_source": "design.json → pages[0].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "home-advantages",
+          "type": "advantages",
+          "purpose": "Build trust through 4 concrete facts: speed, free diagnostics, guarantee, transparent pricing",
+          "content_source": "design.json → pages[0].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "home-services",
+          "type": "services",
+          "purpose": "Show that we repair exactly what broke for the visitor",
+          "content_source": "design.json → pages[0].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "home-how-it-works",
+          "type": "how_it_works",
+          "purpose": "Remove fear of unknown — show simple 4-step process",
+          "content_source": "design.json → pages[0].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-testimonials",
+          "type": "testimonials",
+          "purpose": "Social proof — real reviews mentioning specific repairs",
+          "content_source": "design.json → pages[0].sections[4].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "home-pricing",
+          "type": "pricing",
+          "purpose": "Address the #1 objection — show transparent price ranges",
+          "content_source": "design.json → pages[0].sections[5].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "home-faq",
+          "type": "faq",
+          "purpose": "Address remaining objections about cost, timing, reliability",
+          "content_source": "design.json → pages[0].sections[6].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-cta",
+          "type": "cta",
+          "purpose": "Final push — urgent tone, reinforce guarantee and free diagnostics",
+          "content_source": "design.json → pages[0].sections[7].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "name": "Послуги",
+      "role_in_funnel": "Detail page for visitors who want more info before requesting repair. Each service explained with pricing context.",
+      "sections": [
+        {
+          "id": "services-hero",
+          "type": "page_hero",
+          "purpose": "Context — what this page is about",
+          "content_source": "design.json → pages[1].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "services-details",
+          "type": "service_details",
+          "purpose": "Detailed description of each service with full text and CTA",
+          "content_source": "design.json → pages[1].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "services-cta",
+          "type": "cta",
+          "purpose": "Convert after reviewing services",
+          "content_source": "design.json → pages[1].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "name": "Про нас",
+      "role_in_funnel": "Trust-building page. Shows team history, stats, humanizes the brand for visitors who need more confidence before ordering.",
+      "sections": [
+        {
+          "id": "about-hero",
+          "type": "page_hero",
+          "purpose": "Context — introduce the company",
+          "content_source": "design.json → pages[2].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "about-story",
+          "type": "story",
+          "purpose": "Company history — build human connection",
+          "content_source": "design.json → pages[2].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "about-stats",
+          "type": "stats",
+          "purpose": "Key numbers that prove reliability",
+          "content_source": "design.json → pages[2].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "about-cta",
+          "type": "cta",
+          "purpose": "Convert after building trust",
+          "content_source": "design.json → pages[2].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "contacts",
+      "name": "Контакти",
+      "role_in_funnel": "Final conversion page. All contact methods + form for visitors ready to order.",
+      "sections": [
+        {
+          "id": "contacts-hero",
+          "type": "page_hero",
+          "purpose": "Context — contact page intro",
+          "content_source": "design.json → pages[3].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "contacts-info",
+          "type": "contact_info",
+          "purpose": "All contact methods: phone, email, address, hours",
+          "content_source": "design.json → pages[3].sections[1].content",
+          "funnel_stage": "action",
+          "background": "light"
+        },
+        {
+          "id": "contacts-form",
+          "type": "contact_form",
+          "purpose": "Callback request form",
+          "content_source": "design.json → pages[3].sections[2].content",
+          "funnel_stage": "action",
+          "background": "muted"
+        }
+      ]
+    }
+  ],
+
+  "background_rhythm": {
+    "strategy": "Home: dark → light → muted → light → dark → muted → light → accent. Inner pages: dark → light → muted/accent alternation."
+  }
+}

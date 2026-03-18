@@ -1,0 +1,222 @@
+{
+  "id": "remka-pro",
+  "created_at": "2026-03-17T13:30:00Z",
+  "status": "planned",
+  "plan_version": 1,
+
+  "style": {
+    "preset_id": "SP-01",
+    "preset_name": "Modern Clean",
+    "why": "RemkaPro is a local service business targeting everyday people. Modern Clean communicates professionalism and reliability without being cold or corporate. The client wants 'надійний, професійний' mood and references apple.com — clean aesthetic. SP-18 Corporate Premium rejected — too formal for a repair service. SP-07 Warm Organic rejected — too soft, doesn't convey technical competence.",
+    "tokens": {
+      "border_radius": "rounded-xl",
+      "shadows": "shadow-lg",
+      "heading_weight": "font-bold",
+      "heading_style": "sans",
+      "body_weight": "font-normal",
+      "spacing": "py-16 md:py-24",
+      "card_style": "bg-card rounded-xl shadow-lg p-6 md:p-8",
+      "button_primary": "bg-accent text-white rounded-xl px-8 py-3 font-semibold",
+      "button_secondary": "border-2 border-primary text-primary rounded-xl px-8 py-3",
+      "hover_effect": "scale-[1.02] shadow-xl transition-all duration-300",
+      "decorative": "subtle gradient mesh, geometric shapes with low opacity",
+      "backgrounds": "white → muted → white alternation",
+      "section_transitions": "clean-cut"
+    }
+  },
+
+  "header": {
+    "pattern_id": "HD-01",
+    "pattern_name": "Classic Top Bar + Sticky Nav",
+    "why": "Service business — phone number must be always visible. Top bar shows phone + hours, main nav is sticky with logo + links + CTA button. Simple and functional."
+  },
+
+  "footer": {
+    "pattern_id": "FT-01",
+    "pattern_name": "Classic Multi-Column",
+    "why": "Simple service business with 4 pages — classic footer with about, nav, services, contacts columns. No newsletter needed (not a content business)."
+  },
+
+  "sections": [
+    {
+      "id": "home-hero",
+      "type": "hero",
+      "pattern_id": "H-01",
+      "pattern_name": "Two-Column Split",
+      "why": "Repair service needs to show both value proposition (text) and credibility (photo of real technician). Split layout provides both. H-04 Full-Bleed rejected — no high-quality background photo available. H-05 Bento rejected — too complex for a simple message.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[0].content",
+      "notes": "Left: headline + subheadline + 2 CTA buttons + trust line. Right: photo placeholder of technician at work."
+    },
+    {
+      "id": "home-advantages",
+      "type": "advantages",
+      "pattern_id": "F-01",
+      "pattern_name": "Icon Grid",
+      "why": "4 advantages of equal weight — 2x2 icon grid is clean and scannable. F-06 Stat-Centric rejected — these are qualitative benefits, not big numbers. F-03 Alternating rejected — too much vertical space for 4 short items.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[1].content",
+      "notes": "4 cards in 2x2 grid. Each: icon + title + short description. Subtle hover effect."
+    },
+    {
+      "id": "home-services",
+      "type": "services",
+      "pattern_id": "SV-01",
+      "pattern_name": "Uniform Card Grid",
+      "why": "3 services of equal importance — uniform cards in a row. Each card links to services page. SV-02 Zigzag rejected — 3 items don't need alternating layout.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[2].content",
+      "notes": "3 cards: icon + name + short description + individual CTA."
+    },
+    {
+      "id": "home-how-it-works",
+      "type": "how_it_works",
+      "pattern_id": "W-01",
+      "pattern_name": "Numbered Steps Horizontal",
+      "why": "4-step process — horizontal numbered timeline is intuitive and compact. W-02 Vertical Timeline rejected — takes too much space for 4 simple steps.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[3].content",
+      "notes": "4 steps in a horizontal line with numbers, connectors between steps."
+    },
+    {
+      "id": "home-testimonials",
+      "type": "testimonials",
+      "pattern_id": "T-01",
+      "pattern_name": "Card Carousel",
+      "why": "3 reviews — carousel allows featuring each one prominently while saving space. T-03 Masonry rejected — looks cluttered with only 3 items.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[4].content",
+      "notes": "Star rating + review text + name. Auto-scroll with pause on hover."
+    },
+    {
+      "id": "home-pricing",
+      "type": "pricing",
+      "pattern_id": "P-01",
+      "pattern_name": "Simple Price Table",
+      "why": "Price ranges by service type — simple table is the clearest format. P-02 Tiered Cards rejected — these aren't plan tiers, just service categories.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[5].content",
+      "notes": "Table: service name + price range. Note about free diagnostics below."
+    },
+    {
+      "id": "home-faq",
+      "type": "faq",
+      "pattern_id": "Q-01",
+      "pattern_name": "Accordion Classic",
+      "why": "5 questions — classic accordion is the most usable FAQ pattern. Compact and scannable. Q-02 Two-Column rejected — not enough items to fill two columns.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[6].content",
+      "notes": "Expandable items, first one open by default."
+    },
+    {
+      "id": "home-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered CTA Block",
+      "why": "Simple final push — centered headline + CTA button + trust badges. C-03 Split with Form rejected — form adds friction for a phone-based service.",
+      "background": "accent",
+      "content_source": "design.json → pages[0].sections[7].content",
+      "notes": "Accent background, large headline, prominent CTA button, trust line underneath."
+    },
+    {
+      "id": "services-hero",
+      "type": "page_hero",
+      "pattern_id": "H-06",
+      "pattern_name": "Minimal Page Header",
+      "why": "Inner page — just needs title and short description. No hero image needed for a services list page.",
+      "background": "dark",
+      "content_source": "design.json → pages[1].sections[0].content",
+      "notes": "Simple: headline + description on dark background."
+    },
+    {
+      "id": "services-details",
+      "type": "service_details",
+      "pattern_id": "SV-02",
+      "pattern_name": "Alternating Zigzag",
+      "why": "3 services with long descriptions — zigzag gives each service a full-width section with image + detailed text. Differs from home-services card grid.",
+      "background": "light",
+      "content_source": "design.json → pages[1].sections[1].content",
+      "notes": "Alternating: text left / image right, then text right / image left. Each with its own CTA."
+    },
+    {
+      "id": "services-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered CTA Block",
+      "why": "Same CTA pattern as home — consistency across pages.",
+      "background": "accent",
+      "content_source": "design.json → pages[1].sections[2].content",
+      "notes": "Accent background, conversion-focused."
+    },
+    {
+      "id": "about-hero",
+      "type": "page_hero",
+      "pattern_id": "H-06",
+      "pattern_name": "Minimal Page Header",
+      "why": "Inner page header — clean and simple.",
+      "background": "dark",
+      "content_source": "design.json → pages[2].sections[0].content",
+      "notes": "Company name + tagline."
+    },
+    {
+      "id": "about-story",
+      "type": "story",
+      "pattern_id": "A-01",
+      "pattern_name": "Story with Side Image",
+      "why": "Company story — text with team/workshop photo creates human connection. A-02 Timeline rejected — company history is too short for a timeline.",
+      "background": "light",
+      "content_source": "design.json → pages[2].sections[1].content",
+      "notes": "Text block + photo placeholder on the right."
+    },
+    {
+      "id": "about-stats",
+      "type": "stats",
+      "pattern_id": "N-01",
+      "pattern_name": "Counter Row",
+      "why": "4 key numbers — horizontal counter row with animated counting on scroll. Clean and impactful.",
+      "background": "muted",
+      "content_source": "design.json → pages[2].sections[2].content",
+      "notes": "4 numbers in a row: repairs count, rating, response time, years."
+    },
+    {
+      "id": "about-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered CTA Block",
+      "why": "Consistent CTA across all pages.",
+      "background": "accent",
+      "content_source": "design.json → pages[2].sections[3].content",
+      "notes": "Same pattern as other pages for consistency."
+    },
+    {
+      "id": "contacts-hero",
+      "type": "page_hero",
+      "pattern_id": "H-06",
+      "pattern_name": "Minimal Page Header",
+      "why": "Contact page — minimal header, content below.",
+      "background": "dark",
+      "content_source": "design.json → pages[3].sections[0].content",
+      "notes": "Simple title + description."
+    },
+    {
+      "id": "contacts-info",
+      "type": "contact_info",
+      "pattern_id": "C-04",
+      "pattern_name": "Contact Cards Grid",
+      "why": "Multiple contact methods — cards for phone, email, address, hours. Each card is a clear action point.",
+      "background": "light",
+      "content_source": "design.json → pages[3].sections[1].content",
+      "notes": "4 cards: phone (clickable), email (clickable), address (with map link), working hours."
+    },
+    {
+      "id": "contacts-form",
+      "type": "contact_form",
+      "pattern_id": "C-03",
+      "pattern_name": "Split Form + Info",
+      "why": "Contact form with contextual info — left side has form, right side shows what happens after submission (call within 30 min, etc.).",
+      "background": "muted",
+      "content_source": "design.json → pages[3].sections[2].content",
+      "notes": "Form: name, phone, description. Right: process after submission."
+    }
+  ]
+}

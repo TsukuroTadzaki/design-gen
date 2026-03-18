@@ -1,0 +1,265 @@
+/* ============================================
+   KavaBAR — Project Styles
+   Preset: SP-08 Warm Organic
+   Palette: Deep coffee + sandy warm + teal accent
+   ============================================ */
+
+/* --- CSS Variables (scoped to project) --- */
+html[data-project="kava"] {
+  /* Primary — deep coffee brown */
+  --primary: #4A2C2A;
+  --primary-foreground: #FAF6F1;
+
+  /* Secondary — sandy warm */
+  --secondary: #D4B896;
+  --secondary-foreground: #3A2218;
+
+  /* Accent — teal for CTA & events */
+  --accent: #2A9D8F;
+  --accent-foreground: #FFFFFF;
+
+  /* Backgrounds */
+  --background: #FAF6F1;
+  --foreground: #3A2218;
+
+  /* Muted — warm cream */
+  --muted: #F0E6D8;
+  --muted-foreground: #6B5548;
+
+  /* Card */
+  --card: #FFFFFF;
+  --card-foreground: #3A2218;
+
+  /* Popover */
+  --popover: #FFFFFF;
+  --popover-foreground: #3A2218;
+
+  /* Border */
+  --border: #E8DDD0;
+  --input: #E8DDD0;
+  --ring: #2A9D8F;
+
+  /* Destructive */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  /* Chart colors */
+  --chart-1: #4A2C2A;
+  --chart-2: #D4B896;
+  --chart-3: #2A9D8F;
+  --chart-4: #F0E6D8;
+  --chart-5: #6B5548;
+
+  /* Sidebar (if used) */
+  --sidebar: #FAF6F1;
+  --sidebar-foreground: #3A2218;
+  --sidebar-primary: #4A2C2A;
+  --sidebar-primary-foreground: #FAF6F1;
+  --sidebar-accent: #F0E6D8;
+  --sidebar-accent-foreground: #3A2218;
+  --sidebar-border: #E8DDD0;
+  --sidebar-ring: #2A9D8F;
+
+  /* Radius — Warm Organic rounded-2xl */
+  --radius: 1rem;
+}
+
+/* --- Tailwind @theme mapping --- */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+/* --- Custom Keyframes --- */
+
+/* Gentle floating movement — for decorative elements & blobs */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Fade in from below — for scroll-reveal sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer / loading shine effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Stagger reveal — scale + fade */
+@keyframes stagger {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Organic pulse — subtle scale for blobs & decorative shapes */
+@keyframes organic-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Warm glow — for hover states on cards */
+@keyframes warm-glow {
+  0%, 100% {
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--secondary) 20%, transparent);
+  }
+  50% {
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--secondary) 35%, transparent);
+  }
+}
+
+/* --- Utility Animation Classes --- */
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--muted) 25%,
+    var(--secondary) 50%,
+    var(--muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-organic-pulse {
+  animation: organic-pulse 4s ease-in-out infinite;
+}
+
+.animate-warm-glow {
+  animation: warm-glow 3s ease-in-out infinite;
+}
+
+/* --- Stagger Delay Classes (.stagger-1 through .stagger-6) --- */
+
+.stagger-1 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.6s;
+}
+
+/* --- Custom Scrollbar (warm theme) --- */
+
+html[data-project="kava"] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--muted);
+}
+
+html[data-project="kava"]::-webkit-scrollbar {
+  width: 8px;
+}
+
+html[data-project="kava"]::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+html[data-project="kava"]::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 9999px;
+}
+
+html[data-project="kava"]::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* --- Smooth Scroll --- */
+
+html {
+  scroll-behavior: smooth;
+}

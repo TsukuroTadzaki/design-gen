@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "created_at", "status", "plan_version", "style", "header", "footer", "sections"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["planned"]
+    },
+    "plan_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "style": {
+      "type": "object",
+      "required": ["preset_id", "preset_name", "why", "tokens"],
+      "properties": {
+        "preset_id": { "type": "string" },
+        "preset_name": { "type": "string" },
+        "why": { "type": "string" },
+        "tokens": {
+          "type": "object",
+          "required": [
+            "border_radius", "shadows", "heading_weight", "heading_style",
+            "body_weight", "spacing", "card_style", "button_primary",
+            "button_secondary", "hover_effect", "decorative", "backgrounds",
+            "section_transitions"
+          ],
+          "properties": {
+            "border_radius": { "type": "string" },
+            "shadows": { "type": "string" },
+            "heading_weight": { "type": "string" },
+            "heading_style": { "type": "string" },
+            "body_weight": { "type": "string" },
+            "spacing": { "type": "string" },
+            "card_style": { "type": "string" },
+            "button_primary": { "type": "string" },
+            "button_secondary": { "type": "string" },
+            "hover_effect": { "type": "string" },
+            "decorative": { "type": "string" },
+            "backgrounds": { "type": "string" },
+            "section_transitions": { "type": "string" }
+          }
+        }
+      }
+    },
+    "header": {
+      "type": "object",
+      "required": ["pattern_id", "pattern_name", "why"],
+      "properties": {
+        "pattern_id": { "type": "string" },
+        "pattern_name": { "type": "string" },
+        "why": { "type": "string" }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["pattern_id", "pattern_name", "why"],
+      "properties": {
+        "pattern_id": { "type": "string" },
+        "pattern_name": { "type": "string" },
+        "why": { "type": "string" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/planSectionItem"
+      }
+    }
+  },
+  "definitions": {
+    "planSectionItem": {
+      "type": "object",
+      "required": ["id", "type", "pattern_id", "pattern_name", "why", "background", "content_source"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "pattern_id": { "type": "string" },
+        "pattern_name": { "type": "string" },
+        "why": { "type": "string" },
+        "background": {
+          "type": "string",
+          "enum": ["dark", "light", "muted", "accent"]
+        },
+        "content_source": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "created_at", "status", "business", "audience", "website", "visual"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "URL-friendly project identifier"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "expanded", "approved"]
+    },
+    "business": {
+      "type": "object",
+      "required": ["name", "description", "services", "usp"],
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "services": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "usp": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "required": ["description", "problem", "objections"],
+      "properties": {
+        "description": { "type": "string" },
+        "problem": { "type": "string" },
+        "objections": { "type": "string" }
+      }
+    },
+    "website": {
+      "type": "object",
+      "required": ["pages", "primary_action"],
+      "properties": {
+        "pages": { "type": "array", "items": { "type": "string" } },
+        "primary_action": { "type": "string" },
+        "special_features": { "type": "string" }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "required": ["mood"],
+      "properties": {
+        "references": { "type": "string" },
+        "colors": { "type": "string" },
+        "mood": { "type": "string" }
+      }
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "existing_materials": { "type": "string" },
+        "additional_notes": { "type": "string" }
+      }
+    }
+  }
+}

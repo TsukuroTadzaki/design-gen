@@ -1,0 +1,208 @@
+{
+  "id": "kava",
+  "created_at": "2026-03-17T13:00:00.000Z",
+  "status": "structured",
+  "global": {
+    "header": {
+      "elements": ["logo", "nav:Меню,Події,Контакти", "phone", "cta-button"],
+      "cta_text": "Забронювати столик",
+      "phone": "+380 (XX) XXX-XX-XX",
+      "behavior": "sticky, transparent-on-hero → solid-on-scroll"
+    },
+    "footer": {
+      "columns": [
+        "Бренд: логотип, слоган «Твій острів спокою», коротке описання",
+        "Навігація: Головна, Меню, Події, Контакти",
+        "Графік роботи: Пн-Нд 09:00-23:00, Чт/Сб до 00:00",
+        "Контакти: телефон, email, адреса, соцмережі (Instagram, Facebook, Telegram)"
+      ],
+      "cta": true
+    },
+    "floating_elements": ["scroll-to-top", "booking-button"]
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "name": "Головна",
+      "role_in_funnel": "Головна воронка конверсії: від першого враження атмосфери до бронювання столика. Цільова дія — натиснути «Забронювати столик» або «Переглянути меню».",
+      "sections": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "purpose": "Захопити увагу, передати камерну атмосферу KavaBAR і дати зрозуміти позиціонування — не звичайна кавʼярня, а острів спокою з живою сценою",
+          "content_source": "design.json → pages[0].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "home-advantages",
+          "type": "advantages",
+          "purpose": "Показати 5 ключових відмінностей від звичайних кавʼярень: світова кава, камерність, жива сцена, коктейлі, сімейні десерти",
+          "content_source": "design.json → pages[0].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "home-services",
+          "type": "services",
+          "purpose": "Показати 4 напрямки KavaBAR: кавові напої, коктейлі, десерти, тематичні вечори — кожен з власним CTA",
+          "content_source": "design.json → pages[0].sections[2].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "home-how-it-works",
+          "type": "how_it_works",
+          "purpose": "Пояснити простий 3-кроковий процес бронювання столика, зняти страх складності",
+          "content_source": "design.json → pages[0].sections[3].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-testimonials",
+          "type": "testimonials",
+          "purpose": "Соціальний доказ через 3 відгуки різних типів відвідувачів: пара, бізнес-зустріч, сімʼя з дитиною",
+          "content_source": "design.json → pages[0].sections[4].content",
+          "funnel_stage": "desire",
+          "background": "dark"
+        },
+        {
+          "id": "home-events",
+          "type": "upcoming_events",
+          "purpose": "Показати найближчі події (четверги — слово, суботи — звук) і створити бажання відвідати конкретну подію",
+          "content_source": "design.json → pages[0].sections[5].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "home-faq",
+          "type": "faq",
+          "purpose": "Зняти 4 основні заперечення: мало алкоголю, бронювання, діти, вартість виступів",
+          "content_source": "design.json → pages[0].sections[6].content",
+          "funnel_stage": "desire",
+          "background": "light"
+        },
+        {
+          "id": "home-cta",
+          "type": "cta",
+          "purpose": "Фінальний заклик до дії — забронювати столик або подивитись меню",
+          "content_source": "design.json → pages[0].sections[7].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "menu",
+      "name": "Меню",
+      "role_in_funnel": "Сторінка-каталог: показати повний асортимент напоїв та десертів з фільтрацією по категоріях. Цільова дія — після перегляду меню забронювати столик.",
+      "sections": [
+        {
+          "id": "menu-hero",
+          "type": "hero",
+          "purpose": "Коротке введення в меню з фільтрами-табами по категоріях: Кава, Алкогольні коктейлі, Безалкогольні, Десерти",
+          "content_source": "design.json → pages[1].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "menu-grid",
+          "type": "menu_grid",
+          "purpose": "Фільтрований каталог позицій меню з картками (фото, назва, опис, ціна) і дровер з деталями по кліку",
+          "content_source": "design.json → pages[1].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "menu-cta",
+          "type": "cta",
+          "purpose": "Після перегляду меню — конвертувати у бронювання столика",
+          "content_source": "design.json → pages[1].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "events",
+      "name": "Події та новини",
+      "role_in_funnel": "Сторінка подій: показати розклад четвергів (літературні) та субот (музика/стендап), фото з минулих вечорів. Цільова дія — забронювати на конкретну подію.",
+      "sections": [
+        {
+          "id": "events-hero",
+          "type": "hero",
+          "purpose": "Передати енергію камерних подій, запросити на найближчий вечір",
+          "content_source": "design.json → pages[2].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "events-schedule",
+          "type": "events_schedule",
+          "purpose": "Розклад у форматі двох колонок: четверги (слово) та суботи (звук) з картками подій і кнопками бронювання",
+          "content_source": "design.json → pages[2].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "events-gallery",
+          "type": "gallery",
+          "purpose": "Фото з минулих вечорів — камерна сцена, зосереджені обличчя, аплодисменти — для створення FOMO",
+          "content_source": "design.json → pages[2].sections[2].content",
+          "funnel_stage": "desire",
+          "background": "muted"
+        },
+        {
+          "id": "events-cta",
+          "type": "cta",
+          "purpose": "Конвертувати у бронювання на найближчу подію з акцентом на обмежену кількість місць",
+          "content_source": "design.json → pages[2].sections[3].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    },
+    {
+      "slug": "contacts",
+      "name": "Контакти",
+      "role_in_funnel": "Сторінка контактів і бронювання: вся інформація для візиту (адреса, карта, графік) + форма бронювання столика як головна конверсійна дія.",
+      "sections": [
+        {
+          "id": "contacts-hero",
+          "type": "hero",
+          "purpose": "Адреса, графік роботи, телефон, email — вся ключова контактна інформація на першому екрані",
+          "content_source": "design.json → pages[3].sections[0].content",
+          "funnel_stage": "awareness",
+          "background": "dark"
+        },
+        {
+          "id": "contacts-map",
+          "type": "map",
+          "purpose": "Інтерактивна карта з маркером закладу і кнопкою прокладання маршруту",
+          "content_source": "design.json → pages[3].sections[1].content",
+          "funnel_stage": "interest",
+          "background": "light"
+        },
+        {
+          "id": "contacts-socials",
+          "type": "socials",
+          "purpose": "Посилання на Instagram, Facebook, Telegram для підписки і слідкування за подіями",
+          "content_source": "design.json → pages[3].sections[3].content",
+          "funnel_stage": "interest",
+          "background": "muted"
+        },
+        {
+          "id": "contacts-booking",
+          "type": "booking_form",
+          "purpose": "Форма бронювання столика — головна конверсійна дія сторінки контактів (імʼя, телефон, дата, час, кількість гостей)",
+          "content_source": "design.json → pages[3].sections[2].content",
+          "funnel_stage": "action",
+          "background": "accent"
+        }
+      ]
+    }
+  ],
+  "background_rhythm": {
+    "strategy": "Теплий контрастний ритм: hero завжди dark (кавова палітра, глибокий коричневий фон) → контентні секції чергують light (FAF6F1) та muted (F0E6D8) → testimonials/фото на dark для кінематографічності → CTA завжди accent (тіл #2A9D8F). Жодні дві суміжні секції не мають однаковий тип фону."
+  }
+}

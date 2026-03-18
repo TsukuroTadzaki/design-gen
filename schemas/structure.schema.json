@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "created_at", "status", "global", "pages", "background_rhythm"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["structured"]
+    },
+    "global": {
+      "type": "object",
+      "required": ["header", "footer"],
+      "properties": {
+        "header": {
+          "type": "object",
+          "required": ["elements", "cta_text", "behavior"],
+          "properties": {
+            "elements": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1
+            },
+            "cta_text": { "type": "string" },
+            "phone": { "type": "string" },
+            "behavior": { "type": "string" }
+          }
+        },
+        "footer": {
+          "type": "object",
+          "required": ["columns"],
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 1
+            },
+            "cta": { "type": "boolean" }
+          }
+        },
+        "floating_elements": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/pageItem"
+      }
+    },
+    "background_rhythm": {
+      "type": "object",
+      "required": ["strategy"],
+      "properties": {
+        "strategy": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "pageItem": {
+      "type": "object",
+      "required": ["slug", "name", "role_in_funnel", "sections"],
+      "properties": {
+        "slug": { "type": "string" },
+        "name": { "type": "string" },
+        "role_in_funnel": { "type": "string" },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/structureSectionItem"
+          }
+        }
+      }
+    },
+    "structureSectionItem": {
+      "type": "object",
+      "required": ["id", "type", "purpose", "content_source", "funnel_stage", "background"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "purpose": { "type": "string" },
+        "content_source": { "type": "string" },
+        "funnel_stage": {
+          "type": "string",
+          "enum": ["awareness", "interest", "desire", "action"]
+        },
+        "background": {
+          "type": "string",
+          "enum": ["dark", "light", "muted", "accent"]
+        }
+      }
+    }
+  }
+}

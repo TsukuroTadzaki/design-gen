@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "created_at", "expanded_at", "status", "brief_version", "brand", "services", "advantages", "audience", "pages", "visual_direction", "cta_strategy", "content_plan", "language"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expanded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["expanded", "approved"]
+    },
+    "brief_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "brand": {
+      "type": "object",
+      "required": ["name", "headline", "subheadline", "slogan", "positioning", "key_message"],
+      "properties": {
+        "name": { "type": "string" },
+        "headline": { "type": "string", "maxLength": 80 },
+        "subheadline": { "type": "string", "maxLength": 150 },
+        "slogan": { "type": "string", "maxLength": 40 },
+        "positioning": { "type": "string" },
+        "key_message": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+    "services": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "icon", "short_description", "long_description", "cta"],
+        "properties": {
+          "name": { "type": "string" },
+          "icon": { "type": "string" },
+          "short_description": { "type": "string" },
+          "long_description": { "type": "string" },
+          "cta": { "type": "string" }
+        }
+      }
+    },
+    "advantages": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["title", "description", "icon"],
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "icon": { "type": "string" }
+        }
+      }
+    },
+    "audience": {
+      "type": "object",
+      "required": ["avatars", "objections"],
+      "properties": {
+        "avatars": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["name", "age", "situation", "looking_for", "fears", "purchase_trigger"],
+            "properties": {
+              "name": { "type": "string" },
+              "age": { "type": "integer" },
+              "situation": { "type": "string" },
+              "looking_for": { "type": "string" },
+              "fears": { "type": "string" },
+              "purchase_trigger": { "type": "string" }
+            }
+          }
+        },
+        "objections": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["objection", "answer"],
+            "properties": {
+              "objection": { "type": "string" },
+              "answer": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "purpose", "sections"],
+        "properties": {
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "purpose": { "type": "string" },
+          "sections": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/definitions/sectionItem"
+            }
+          }
+        }
+      }
+    },
+    "visual_direction": {
+      "type": "object",
+      "required": ["style_recommendation", "color_palette", "visual_language"],
+      "properties": {
+        "style_recommendation": { "type": "string" },
+        "color_palette": {
+          "type": "object",
+          "required": ["primary", "secondary", "accent", "background", "muted", "card", "border"],
+          "properties": {
+            "primary": {
+              "type": "object",
+              "required": ["hex", "role", "usage"],
+              "properties": {
+                "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+                "role": { "type": "string" },
+                "usage": { "type": "string" }
+              }
+            },
+            "secondary": {
+              "type": "object",
+              "required": ["hex", "role", "usage"],
+              "properties": {
+                "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+                "role": { "type": "string" },
+                "usage": { "type": "string" }
+              }
+            },
+            "accent": {
+              "type": "object",
+              "required": ["hex", "role", "usage"],
+              "properties": {
+                "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+                "role": { "type": "string" },
+                "usage": { "type": "string" }
+              }
+            },
+            "background": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "muted": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "card": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "border": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+          }
+        },
+        "visual_language": {
+          "type": "object",
+          "required": ["photo_style", "shapes", "textures", "animations", "decorative"],
+          "properties": {
+            "photo_style": { "type": "string" },
+            "shapes": { "type": "string" },
+            "textures": { "type": "string" },
+            "animations": { "type": "string" },
+            "decorative": { "type": "string" }
+          }
+        }
+      }
+    },
+    "cta_strategy": {
+      "type": "object",
+      "required": ["primary_cta_text", "secondary_cta_text", "touchpoints"],
+      "properties": {
+        "primary_cta_text": { "type": "string" },
+        "secondary_cta_text": { "type": "string" },
+        "phone": { "type": "string" },
+        "touchpoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "content_plan": {
+      "type": "object",
+      "required": ["available", "needed", "placeholder_strategy"],
+      "properties": {
+        "available": { "type": "array", "items": { "type": "string" } },
+        "needed": { "type": "array", "items": { "type": "string" } },
+        "placeholder_strategy": { "type": "string" }
+      }
+    },
+    "language": {
+      "type": "string",
+      "enum": ["uk", "en", "ru"]
+    },
+    "mobile_priority": {
+      "type": "boolean"
+    }
+  },
+  "definitions": {
+    "sectionItem": {
+      "type": "object",
+      "required": ["type", "purpose", "content"],
+      "properties": {
+        "type": { "type": "string" },
+        "purpose": { "type": "string" },
+        "content": { "type": "object" }
+      }
+    }
+  }
+}
