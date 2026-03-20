@@ -8,11 +8,12 @@ Project ID and Section ID from arguments: $ARGUMENTS
 1. Parse arguments: first word is project-id, second word is section-id.
 
 2. Read the following files:
-   - `projects/{project-id}/plan.json` → find the section by section-id
+   - `projects/{project-id}/plan.json` → find the section by section-id (including its effects array)
    - `projects/{project-id}/design.json` → content at path specified by content_source
    - `projects/{project-id}/structure.json` → for global elements (header/footer)
    - `src/projects/{project-id}/output/styles.css` → for reference of CSS variables and animation classes
    - `docs/SECTION_PATTERNS.md` → find pattern by pattern_id, read full description
+   - `docs/CREATIVE_EFFECTS.md` → implementation code for effects assigned to this section
    - `docs/TECH_GUIDE.md` → technical code rules
    - `docs/LEARNED_RULES.md` → past mistakes to avoid
 

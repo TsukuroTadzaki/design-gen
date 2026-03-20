@@ -1,0 +1,675 @@
+{
+  "id": "divotek",
+  "created_at": "2026-03-18T10:00:00Z",
+  "status": "planned",
+  "plan_version": 1,
+  "style": {
+    "preset_id": "SP-01",
+    "preset_name": "Modern Clean",
+    "why": "DiVotek — IT-агентство веб-розробки з 15-річним досвідом. SP-01 створений саме для IT-компаній та агентств: clean contemporary стиль з soft shadows та rounded-xl елементами проєктує професійність без стерильності. Design.json палітра (#1E40AF primary, #3B82F6 secondary, #F97316 accent) — класичний tech blue + vibrant orange CTA — ідеально лягає на SP-01 neutral base + one vibrant primary + contrasting accent. Відкинуто SP-13 Bento Grid: DiVotek не платформа/dashboard, а сервісна агентство з класичною воронкою (hero → послуги → портфоліо → CTA). Відкинуто SP-03 Hi-Tech Dark: занадто aggressive/neon для B2B агентства, яке продає довіру та професіоналізм малому/середньому бізнесу. Відкинуто SP-04 Glassmorphism: стильний але не підходить для service-heavy сайту з 11 сторінками — blur ефекти на кожній сторінці стомлюють. DESIGN_PRINCIPLES §9: SaaS/Tech = High complexity — SP-01 дає чисту базу для складних ефектів.",
+    "tokens": {
+      "border_radius": "rounded-xl (12px)",
+      "shadows": "shadow-lg base, shadow-xl on hover",
+      "heading_weight": "font-bold",
+      "heading_style": "sans-serif (system or geometric sans like Inter, Plus Jakarta)",
+      "body_weight": "font-normal",
+      "spacing": "py-16 md:py-24 (standard)",
+      "card_style": "bg-card rounded-xl shadow-lg p-6 md:p-8",
+      "button_primary": "bg-accent text-white rounded-xl px-8 py-3 font-semibold",
+      "button_secondary": "border-2 border-primary text-primary rounded-xl px-8 py-3",
+      "hover_effect": "scale-[1.02] + shadow increase",
+      "decorative": "subtle gradient mesh backgrounds, low-opacity geometric shapes",
+      "backgrounds": "white → muted → white alternation",
+      "section_transitions": "clean-cut (background color change, no dividers)"
+    }
+  },
+  "header": {
+    "pattern_id": "HD-02",
+    "pattern_name": "Transparent Scroll-Reactive",
+    "why": "DiVotek має sticky header з 4 елементами (logo, nav, phone, CTA 'Обговорити проект'). HD-02 починає прозорим на dark hero → solid bg-background/80 backdrop-blur при скролі. Modern Clean стиль + dark heroes на кожній сторінці роблять HD-02 ідеальним: герой працює на повну ширину без візуального конфлікту з хедером. Телефон і CTA кнопка 'Обговорити проект' завжди видимі — ключово для B2B конверсії. Відкинуто HD-01: top bar з контактами надмірний для агентства — Barkas вже використовує. HD-04 (Decorative) — DiVotek не artisan brand. Kava також використовує HD-02, але це зовсім інший бізнес-тип (ресторан vs IT), і HD-02 — найкращий вибір для hero-driven sites."
+  },
+  "footer": {
+    "pattern_id": "FT-02",
+    "pattern_name": "Asymmetric Brand-Heavy (5:7 Split)",
+    "why": "Structure.json визначає 4 колонки: Про компанію, Послуги, Блог, Контакти. FT-02 виділяє ліву частину (5/12) під brand block — логотип DiVotek, слоган 'Код. Стратегія. Результат.' та соцмережі. Для агентства brand presence у footer критично важливий — це остання точка контакту. Праві 7/12 — 3 колонки навігації (Послуги, Блог, Контакти). Відкинуто FT-01: вже використовується Barkas. Відкинуто FT-04: Contact-Focused підходить для локальних бізнесів (kava), не для IT-агентства з онлайн-воронкою. FT-03 (Newsletter) розглядався, але DiVotek не робить акцент на підписку — головна конверсія через форму заявки."
+  },
+  "sections": [
+    {
+      "id": "home-hero",
+      "type": "hero",
+      "pattern_id": "H-05",
+      "pattern_name": "Geometric Composite Grid",
+      "why": "DiVotek — агентство, яке створює сайти. H-05 демонструє це через CSS Grid композицію з кольорових блоків, кругів та вкладених прямокутників праворуч — візуальна метафора дизайн-системи. Ліворуч: headline 'Створюємо сайти, які працюють на ваш бізнес' + subheadline + 2 CTA + row з 3 stats (15+ років, 100+ проектів, 4.9 рейтинг). Best for: 'Design agencies, design systems, tech/software' — пряме попадання. Kava = H-04, Barkas = H-01 — variety ✓.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[0].content",
+      "effects": [
+        { "type": "BACKGROUND-PATTERN", "variant": "grid", "opacity": 0.04, "animate": true },
+        { "type": "3D-TRANSFORM", "target": "geometric-blocks", "trigger": "hover", "axis": "Y", "angle": 8 },
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 }
+      ]
+    },
+    {
+      "id": "home-advantages",
+      "type": "advantages",
+      "pattern_id": "F-01",
+      "pattern_name": "Symmetric Card Grid",
+      "why": "Переваги DiVotek (досвід, гарантія, прозорість, SEO, підтримка) мають рівну вагу — жодна не домінує. F-01 дає 3-column grid з рівними картками icon + title + description. Trust-building через конкретні цифри та обіцянки. Best for: 'SaaS features, tech platforms' — підходить для IT-агентства.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "border-reveal", "target": "card" }
+      ]
+    },
+    {
+      "id": "home-services",
+      "type": "services",
+      "pattern_id": "SV-02",
+      "pattern_name": "Alternating Detail Showcase",
+      "why": "4 послуги DiVotek (створення сайтів, SEO, маркетинг, підтримка) — кожна заслуговує на деталізовану подачу з фото і розгорнутим описом. SV-02 чергує image-left/image-right для кожної послуги, створюючи візуальний ритм. Для агентства послуги — головний продукт, тому showcase формат краще ніж компактний grid. 4 items у діапазоні 3-6. Візуально різко відрізняється від F-01 card grid вище.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.15 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "card" },
+        { "type": "DECORATIVE-ELEMENT", "variant": "accent-line", "position": "section-label" }
+      ]
+    },
+    {
+      "id": "home-how-it-works",
+      "type": "how_it_works",
+      "pattern_id": "W-01",
+      "pattern_name": "Horizontal Step Grid with Connector",
+      "why": "Процес роботи DiVotek — лінійний (аналіз → дизайн → розробка → запуск → підтримка). W-01 — горизонтальна лінія з'єднує кроки з номерами. Best for: 'straightforward linear processes'. Візуалізує простоту і прозорість процесу — знімає страх невизначеності для клієнтів, які вперше замовляють сайт.",
+      "background": "light",
+      "content_source": "design.json → pages[0].sections[3].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.12 },
+        { "type": "DECORATIVE-ELEMENT", "variant": "accent-line", "position": "connector" }
+      ]
+    },
+    {
+      "id": "home-testimonials",
+      "type": "testimonials",
+      "pattern_id": "T-05",
+      "pattern_name": "Featured + Supporting Two-Tier",
+      "why": "Відгуки від бізнес-клієнтів DiVotek. T-05 виділяє один найкращий відгук великим форматом (2-column hero) зверху + 3 підтримуючі картки нижче. Для B2B агентства featured testimonial від ключового клієнта працює як head social proof. Best for: 'high-conversion pages, premium services'. Dark background підсилить контраст та кінематографічність.",
+      "background": "dark",
+      "content_source": "design.json → pages[0].sections[4].content",
+      "effects": [
+        { "type": "BACKGROUND-PATTERN", "variant": "dots", "opacity": 0.03 },
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.1 }
+      ]
+    },
+    {
+      "id": "home-faq",
+      "type": "faq",
+      "pattern_id": "Q-01",
+      "pattern_name": "Single-Column Accordion",
+      "why": "FAQ DiVotek знімає основні заперечення перед зверненням. Q-01 — універсальний single-column accordion. Без категоризації (Q-02) або табів (Q-03) — кількість питань не вимагає групування.",
+      "background": "muted",
+      "content_source": "design.json → pages[0].sections[5].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.08 }
+      ]
+    },
+    {
+      "id": "home-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Фінальний CTA 'Обговоримо ваш проект?' — headline + description + 2 кнопки. C-01 centered — мінімальний і focused на конверсію. Accent background (#F97316 orange) контрастує з синьою палітрою, створюючи яскравий фінал воронки.",
+      "background": "accent",
+      "content_source": "design.json → pages[0].sections[6].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "mesh", "opacity": 0.15 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "about-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero — компактний (py-16 md:py-24). H-02 centered: title 'Про нас' + subtitle. Floating geometric shapes на задньому фоні підтримують brand identity DiVotek. Не потребує two-column або full-bleed photo.",
+      "background": "dark",
+      "content_source": "design.json → pages[1].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "BACKGROUND-PATTERN", "variant": "grid", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "about-story",
+      "type": "story",
+      "pattern_id": "A-06",
+      "pattern_name": "Chronological Story Timeline",
+      "why": "Історія DiVotek з ключовими віхами (заснування, перший клієнт, 100-й проект, тощо). A-06 — vertical timeline з alternating left-right blocks та connector line. Best for: 'About/history pages, origin stories, company milestones'. 15 років досвіду дає достатньо віх для цікавого timeline.",
+      "background": "light",
+      "content_source": "design.json → pages[1].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.15 }
+      ]
+    },
+    {
+      "id": "about-values",
+      "type": "values",
+      "pattern_id": "F-04",
+      "pattern_name": "Split Screen (50-50 Visual + List)",
+      "why": "Цінності DiVotek (прозорість, якість, підтримка). F-04 — ліворуч велике зображення команди, праворуч — вертикальний список цінностей з іконками. Премійне позиціонування через generous whitespace. Візуально відрізняється від A-06 timeline вище та F-01 card grid на home. Best for: 'Key value propositions, premium positioning'.",
+      "background": "muted",
+      "content_source": "design.json → pages[1].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "DECORATIVE-ELEMENT", "variant": "accent-line", "position": "list-items" }
+      ]
+    },
+    {
+      "id": "about-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Після знайомства з компанією — заклик до контакту. C-01 centered — headline + 2 кнопки (обговорити проект + портфоліо).",
+      "background": "accent",
+      "content_source": "design.json → pages[1].sections[3].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "radial-orbs", "animate": "float", "opacity": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "contacts-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero — компактний. Заголовок 'Контакти' + підзаголовок. Мінімум відволікань перед формою.",
+      "background": "dark",
+      "content_source": "design.json → pages[2].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" }
+      ]
+    },
+    {
+      "id": "contacts-form",
+      "type": "contact_form",
+      "pattern_id": "C-02",
+      "pattern_name": "Form + Information Sidebar",
+      "why": "Форма заявки DiVotek (ім'я, email, телефон, тип проекту, бюджет, опис) + sidebar з контактами та графіком. C-02 — form ліворуч (60-70%) + info cards праворуч. Best for: 'professional contact, multi-office companies'. Sidebar показує альтернативні канали зв'язку поруч з формою.",
+      "background": "light",
+      "content_source": "design.json → pages[2].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.1 }
+      ]
+    },
+    {
+      "id": "contacts-info",
+      "type": "contact_info",
+      "pattern_id": "F-01",
+      "pattern_name": "Symmetric Card Grid",
+      "why": "Альтернативні способи зв'язку (телефон, email, месенджери) — 3 рівноцінні канали. F-01 — 3 картки з icon + title + value. Symmetric layout для рівноцінних опцій.",
+      "background": "muted",
+      "content_source": "design.json → pages[2].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "card" }
+      ]
+    },
+    {
+      "id": "contacts-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Фінальний заклик — зателефонувати, якщо форма не підходить. C-01 centered — мінімальний.",
+      "background": "accent",
+      "content_source": "design.json → cta_strategy",
+      "effects": [
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "web-development-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero для категорії 'Створення сайтів'. Centered title + subtitle + floating code/design shapes.",
+      "background": "dark",
+      "content_source": "design.json → pages[3].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "BACKGROUND-PATTERN", "variant": "dots", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "web-development-services-list",
+      "type": "services_list",
+      "pattern_id": "SV-01",
+      "pattern_name": "Uniform Card Grid",
+      "why": "Типи сайтів (лендінг, корпоративний, інтернет-магазин, портал) — рівноцінні пропозиції для browsing. SV-01 — 3-column grid з icon + title + description + CTA. Best for: 'Multi-service businesses, consulting firms'.",
+      "background": "light",
+      "content_source": "design.json → pages[3].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "border-reveal", "target": "card" }
+      ]
+    },
+    {
+      "id": "web-development-advantages",
+      "type": "advantages",
+      "pattern_id": "F-04",
+      "pattern_name": "Split Screen (50-50 Visual + List)",
+      "why": "Чому замовити розробку у DiVotek. F-04 — великий mockup/screenshot ліворуч, список переваг з іконками праворуч. Візуально відрізняється від SV-01 card grid вище. Best for: 'Key value propositions, premium positioning'.",
+      "background": "muted",
+      "content_source": "design.json → pages[3].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "3D-TRANSFORM", "target": "image", "trigger": "static", "axis": "Y", "angle": -3 }
+      ]
+    },
+    {
+      "id": "web-development-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "CTA 'Обговорити мій проект' — направити до заявки. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[3].sections[3].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "mesh", "opacity": 0.15 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "web-development-service-hero",
+      "type": "hero",
+      "pattern_id": "H-01",
+      "pattern_name": "Two-Column Split",
+      "why": "Детальна сторінка послуги 'Створення сайтів' — потребує повний hero з screenshot/mockup праворуч. H-01 — headline + description + CTA ліворуч, laptop mockup з сайтом праворуч. Floating badge '100+ проектів'. Best for: 'SaaS products, corporate sites'.",
+      "background": "dark",
+      "content_source": "design.json → pages[4].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "3D-TRANSFORM", "target": "image", "trigger": "static", "axis": "Y", "angle": 5 },
+        { "type": "FLOATING-ELEMENTS", "variant": "badges", "count": 2, "position": "around-content", "animation": "float" }
+      ]
+    },
+    {
+      "id": "web-development-service-details",
+      "type": "service_details",
+      "pattern_id": "F-03",
+      "pattern_name": "Zigzag Alternating Rows",
+      "why": "Деталізація послуги: що входить, технології, підхід — кожен аспект заслуговує на розгорнутий блок з візуалом. F-03 чергує image-left/text-right. Best for: 'detailed feature explanations'. Storytelling approach для складної послуги.",
+      "background": "light",
+      "content_source": "design.json → pages[4].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.15 }
+      ]
+    },
+    {
+      "id": "web-development-service-process",
+      "type": "process",
+      "pattern_id": "W-04",
+      "pattern_name": "Bordered Column Stack",
+      "why": "Детальний процес розробки з 5-7 етапами та описами. W-04 — vertical stack з thick left border accent та number badge. Best for: 'Professional/business processes, detailed workflows'. Відрізняється від W-01 на home page.",
+      "background": "muted",
+      "content_source": "design.json → pages[4].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.12 }
+      ]
+    },
+    {
+      "id": "web-development-service-testimonials",
+      "type": "testimonials",
+      "pattern_id": "T-01",
+      "pattern_name": "Classic Card Grid",
+      "why": "Релевантні відгуки від клієнтів, які замовляли розробку. T-01 — 2-3 column grid з rating + quote + avatar. Classic, надійний формат для B2B. Best for: 'general social proof, service businesses'.",
+      "background": "dark",
+      "content_source": "design.json → pages[4].sections[3].content",
+      "effects": [
+        { "type": "BACKGROUND-PATTERN", "variant": "dots", "opacity": 0.03 },
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.1 }
+      ]
+    },
+    {
+      "id": "web-development-service-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Конверсія — замовити розробку. C-01 centered з accent background.",
+      "background": "accent",
+      "content_source": "design.json → pages[4].sections[4].content",
+      "effects": [
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "seo-marketing-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero для категорії 'SEO та маркетинг'. Centered text + floating chart/graph shapes. Відрізняється від web-development-hero floating shapes.",
+      "background": "dark",
+      "content_source": "design.json → pages[5].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "BACKGROUND-PATTERN", "variant": "grid", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "seo-marketing-services-list",
+      "type": "services_list",
+      "pattern_id": "SV-03",
+      "pattern_name": "Category Tab Filter",
+      "why": "Маркетингові послуги мають підкатегорії (SEO-аудит, просування, контекст, SMM). SV-03 — tabs зверху для категорій + grid карток. Відрізняється від SV-01 на web-development page. Best for: 'Multi-category services, agencies with diverse offerings'.",
+      "background": "light",
+      "content_source": "design.json → pages[5].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "card" }
+      ]
+    },
+    {
+      "id": "seo-marketing-results",
+      "type": "results",
+      "pattern_id": "N-01",
+      "pattern_name": "Horizontal Counter Row",
+      "why": "Результати SEO-роботи в цифрах (трафік +250%, конверсія +40%, ROI 300%). N-01 — horizontal row з animated counter numbers. Best for: 'trust-building, corporate about pages'. Великі анімовані числа — найсильніший social proof для маркетингових послуг.",
+      "background": "muted",
+      "content_source": "design.json → pages[5].sections[2].content",
+      "effects": [
+        { "type": "SCROLL-DRIVEN", "variant": "counter", "target": "element" },
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" }
+      ]
+    },
+    {
+      "id": "seo-marketing-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "CTA 'Замовити безкоштовний аудит'. C-01 centered — focused на одну дію.",
+      "background": "accent",
+      "content_source": "design.json → pages[5].sections[3].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "mesh", "opacity": 0.15 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "seo-marketing-service-hero",
+      "type": "hero",
+      "pattern_id": "H-01",
+      "pattern_name": "Two-Column Split",
+      "why": "Детальна сторінка SEO-послуги. H-01 — headline з обіцянкою результату ліворуч, dashboard mockup з графіками праворуч. Floating badge 'Перший результат за 30 днів'. Відрізняється від web-development-service hero тим, що правий блок — dashboard, не laptop.",
+      "background": "dark",
+      "content_source": "design.json → pages[6].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "3D-TRANSFORM", "target": "image", "trigger": "static", "axis": "Y", "angle": -5 },
+        { "type": "BACKGROUND-PATTERN", "variant": "dots", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "seo-marketing-service-details",
+      "type": "service_details",
+      "pattern_id": "SV-04",
+      "pattern_name": "Service Detail Split",
+      "why": "Що саме отримає клієнт від SEO. SV-04 — велике зображення ліворуч (60%), деталі з bullet list + CTA праворуч (40%). Відрізняється від F-03 zigzag на web-development-service page. Best for: 'Individual service pages, high-value services'.",
+      "background": "light",
+      "content_source": "design.json → pages[6].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "DECORATIVE-ELEMENT", "variant": "accent-line", "position": "section-label" }
+      ]
+    },
+    {
+      "id": "seo-marketing-service-process",
+      "type": "process",
+      "pattern_id": "W-01",
+      "pattern_name": "Horizontal Step Grid with Connector",
+      "why": "Процес SEO-роботи — лінійний (аудит → стратегія → впровадження → моніторинг). W-01 — horizontal steps. Відрізняється від W-04 на web-development-service page.",
+      "background": "muted",
+      "content_source": "design.json → pages[6].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.12 }
+      ]
+    },
+    {
+      "id": "seo-marketing-service-testimonials",
+      "type": "testimonials",
+      "pattern_id": "T-02",
+      "pattern_name": "Large Avatar Hero",
+      "why": "Відгук від SEO-клієнта. T-02 з великим аватаром (120-192px) — персональний і довірливий. Відрізняється від T-01 на web-development-service page. Best for: 'personal services, premium brands'.",
+      "background": "dark",
+      "content_source": "design.json → pages[6].sections[3].content",
+      "effects": [
+        { "type": "BACKGROUND-PATTERN", "variant": "grid", "opacity": 0.03 },
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" }
+      ]
+    },
+    {
+      "id": "seo-marketing-service-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Конверсія — замовити SEO-аудит. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[6].sections[4].content",
+      "effects": [
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "blog-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero для блогу. Centered title 'Блог' + subtitle. Мінімальний — фокус на контент нижче.",
+      "background": "dark",
+      "content_source": "design.json → pages[7].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" }
+      ]
+    },
+    {
+      "id": "blog-articles-grid",
+      "type": "articles_grid",
+      "pattern_id": "B-01",
+      "pattern_name": "Featured + Grid",
+      "why": "Список статей з featured article зверху + grid карток нижче. B-01 виділяє головну статтю, решта — в compact grid. Фільтрація за категоріями. Best for: 'company blogs, news sections, content marketing'.",
+      "background": "light",
+      "content_source": "design.json → pages[7].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "card" }
+      ]
+    },
+    {
+      "id": "blog-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "CTA для конверсії читачів блогу. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[7].sections[2].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "radial-orbs", "animate": "float", "opacity": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "blog-article-header",
+      "type": "article_header",
+      "pattern_id": "H-04",
+      "pattern_name": "Full-Bleed Photo with Overlay",
+      "why": "Hero статті з cover-зображенням на весь екран + breadcrumbs + title + metadata (дата, автор, час читання). H-04 — full-bleed photo з gradient overlay. Створює immersive entry point для статті.",
+      "background": "dark",
+      "content_source": "design.json → pages[8].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "PARALLAX", "target": "background", "speed": 0.3 }
+      ]
+    },
+    {
+      "id": "blog-article-body",
+      "type": "article_body",
+      "pattern_id": "B-03",
+      "pattern_name": "Sidebar Blog Layout",
+      "why": "Контент статті з sidebar: related articles, CTA banner, table of contents. B-03 — main content 2/3 + sidebar 1/3 з widgets. Best for: 'Content-heavy blogs, news portals'.",
+      "background": "light",
+      "content_source": "design.json → pages[8].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" }
+      ]
+    },
+    {
+      "id": "blog-article-related",
+      "type": "related_articles",
+      "pattern_id": "B-06",
+      "pattern_name": "Compact Card Grid",
+      "why": "'Читайте також' — 3 релевантні статті. B-06 — 3-column compact cards з accent category bar. Утримує читача на сайті.",
+      "background": "muted",
+      "content_source": "design.json → pages[8].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "HOVER-EFFECT", "variant": "border-reveal", "target": "card" }
+      ]
+    },
+    {
+      "id": "blog-article-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Конверсія після прочитання статті. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[8].sections[3].content",
+      "effects": [
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "portfolio-hero",
+      "type": "hero",
+      "pattern_id": "H-02",
+      "pattern_name": "Centered Text with Floating Elements",
+      "why": "Inner page hero для портфоліо. Centered title 'Наші роботи' + subtitle. Floating shapes = мініатюрні screenshots проектів.",
+      "background": "dark",
+      "content_source": "design.json → pages[9].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "BACKGROUND-PATTERN", "variant": "grid", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "portfolio-grid",
+      "type": "portfolio_grid",
+      "pattern_id": "G-07",
+      "pattern_name": "Case Study Cards with Metrics",
+      "why": "Сітка проектів DiVotek з фільтрацією за типом та індустрією. G-07 — 2-column grid з великими картками: project image, title, challenge/solution, result metrics. Best for: 'B2B agencies, consulting firms, performance-focused portfolios'. Для IT-агентства результати в цифрах (конверсія +30%, швидкість x2) — найкращий social proof.",
+      "background": "light",
+      "content_source": "design.json → pages[9].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.12 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "card" }
+      ]
+    },
+    {
+      "id": "portfolio-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Конверсія після перегляду портфоліо — 'Хочете такий же результат?'. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[9].sections[2].content",
+      "effects": [
+        { "type": "GRADIENT-LAYER", "variant": "mesh", "opacity": 0.15 },
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    },
+
+    {
+      "id": "portfolio-item-hero",
+      "type": "project_hero",
+      "pattern_id": "H-01",
+      "pattern_name": "Two-Column Split",
+      "why": "Hero кейсу: назва проекту + клієнт + ключовий результат ліворуч, головний screenshot праворуч. H-01 — balanced text-visual pairing. Floating badges з метриками.",
+      "background": "dark",
+      "content_source": "design.json → pages[10].sections[0].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+        { "type": "3D-TRANSFORM", "target": "image", "trigger": "hover", "axis": "XY", "angle": 5 }
+      ]
+    },
+    {
+      "id": "portfolio-item-overview",
+      "type": "project_overview",
+      "pattern_id": "SV-04",
+      "pattern_name": "Service Detail Split",
+      "why": "Опис задачі клієнта — з чим прийшов. SV-04 — зображення (до/ситуація) ліворуч, текст задачі + context праворуч. Best for: 'Individual service pages, high-value services' — адаптуємо для project challenge description.",
+      "background": "light",
+      "content_source": "design.json → pages[10].sections[1].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "DECORATIVE-ELEMENT", "variant": "accent-line", "position": "section-label" }
+      ]
+    },
+    {
+      "id": "portfolio-item-solution",
+      "type": "project_solution",
+      "pattern_id": "F-03",
+      "pattern_name": "Zigzag Alternating Rows",
+      "why": "Рішення DiVotek — кілька аспектів (дизайн, розробка, SEO) з screenshots. F-03 чергує image-left/text-right для кожного аспекту. Storytelling approach.",
+      "background": "muted",
+      "content_source": "design.json → pages[10].sections[2].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up", "stagger": 0.15 }
+      ]
+    },
+    {
+      "id": "portfolio-item-results",
+      "type": "project_results",
+      "pattern_id": "N-01",
+      "pattern_name": "Horizontal Counter Row",
+      "why": "Результати в цифрах — доказ ефективності. N-01 — horizontal row з animated counters. Великі числа (конверсія +45%, швидкість x3, трафік +200%) створюють вау-ефект.",
+      "background": "dark",
+      "content_source": "design.json → pages[10].sections[3].content",
+      "effects": [
+        { "type": "SCROLL-DRIVEN", "variant": "counter", "target": "element" },
+        { "type": "REVEAL-ANIMATION", "variant": "fade-up" },
+        { "type": "BACKGROUND-PATTERN", "variant": "dots", "opacity": 0.03 }
+      ]
+    },
+    {
+      "id": "portfolio-item-gallery",
+      "type": "project_gallery",
+      "pattern_id": "G-04",
+      "pattern_name": "Lightbox Modal Gallery",
+      "why": "Screenshots сторінок сайту — thumbnail grid з lightbox по кліку. G-04 — 2-3 column grid + full-screen modal. Best for: 'Photography galleries, event photos, product detail images'.",
+      "background": "light",
+      "content_source": "design.json → pages[10].sections[4].content",
+      "effects": [
+        { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.08 },
+        { "type": "HOVER-EFFECT", "variant": "lift", "target": "image" }
+      ]
+    },
+    {
+      "id": "portfolio-item-cta",
+      "type": "cta",
+      "pattern_id": "C-01",
+      "pattern_name": "Centered Single Column",
+      "why": "Конверсія після перегляду кейсу — 'Хочете такий же проект?'. C-01 centered.",
+      "background": "accent",
+      "content_source": "design.json → pages[10].sections[5].content",
+      "effects": [
+        { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+      ]
+    }
+  ]
+}

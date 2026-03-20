@@ -10,6 +10,7 @@ Project ID: $ARGUMENTS
    - `docs/STYLE_PRESETS.md` — style presets catalog
    - `docs/SECTION_PATTERNS.md` — layout patterns catalog
    - `docs/DESIGN_PRINCIPLES.md` — design principles
+   - `docs/CREATIVE_EFFECTS.md` — effects catalog (12 parametric effects)
 
 2. If design.json or structure.json don't exist, report an error and stop.
 

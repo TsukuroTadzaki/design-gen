@@ -56,6 +56,14 @@ Condensed lessons from past project iterations. These represent real mistakes th
 
 ---
 
+## AI Default Patterns (avoid)
+
+- Do NOT add a badge/label above hero heading by default. Badges like "🚀 Web Development" are an AI cliché — every LLM generates them. Use only when design.json content explicitly includes a badge. KavaBAR v2 + DiVotek v2: both had unwanted badges.
+- Do NOT generate hero sections without creative effects. A hero with just heading + text + buttons on solid bg is generic. ALWAYS implement effects from plan.json. KavaBAR v2.
+- Hero CTA buttons should be visually substantial — minimum py-4 (ideally py-5). Default py-3 looks thin with text-5xl+ headings. Add arrow icon with shift-on-hover animation. DiVotek v2.
+
+---
+
 ## Phase 3 Generation
 
 ### Header & Hero Interaction

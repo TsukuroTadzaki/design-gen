@@ -81,7 +81,7 @@
   "definitions": {
     "planSectionItem": {
       "type": "object",
-      "required": ["id", "type", "pattern_id", "pattern_name", "why", "background", "content_source"],
+      "required": ["id", "type", "pattern_id", "pattern_name", "why", "background", "content_source", "effects"],
       "properties": {
         "id": { "type": "string" },
         "type": { "type": "string" },
@@ -93,7 +93,30 @@
           "enum": ["dark", "light", "muted", "accent"]
         },
         "content_source": { "type": "string" },
-        "notes": { "type": "string" }
+        "notes": { "type": "string" },
+        "effects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": { "type": "string", "enum": [
+                "BACKGROUND-PATTERN", "GRADIENT-LAYER", "FLOATING-ELEMENTS",
+                "3D-TRANSFORM", "PARALLAX", "REVEAL-ANIMATION", "TEXT-EFFECT",
+                "HOVER-EFFECT", "SCROLL-DRIVEN", "DECORATIVE-ELEMENT",
+                "CURSOR-EFFECT", "SECTION-TRANSITION"
+              ]},
+              "variant": { "type": "string" },
+              "trigger": { "type": "string" },
+              "target": { "type": "string" },
+              "opacity": { "type": "number" },
+              "animate": {},
+              "axis": { "type": "string" },
+              "angle": { "type": "number" }
+            }
+          },
+          "minItems": 1
+        }
       }
     }
   }

@@ -27,6 +27,23 @@ You are generating ONE React section component.
 ## Available CSS Variables and Animations (from styles.css)
 {styles_css}
 
+## Creative Effects to Implement
+
+This section must include these effects (from plan.json):
+{effects}
+
+Read docs/CREATIVE_EFFECTS.md for implementation code of each effect type.
+Use the code examples as starting point, adapt parameters as specified.
+
+CRITICAL: Every section MUST have visual effects beyond plain content.
+A section without effects looks generic and AI-generated.
+Effects are layered:
+  Layer 1: Section background
+  Layer 2: Background effects (BACKGROUND-PATTERN, GRADIENT-LAYER)
+  Layer 3: Content (from pattern)
+  Layer 4: Interactive effects (HOVER-EFFECT, CURSOR-EFFECT)
+  Layer 5: Entry animations (REVEAL-ANIMATION)
+
 ## Instructions
 
 1. Implement the layout described in the Pattern Description exactly

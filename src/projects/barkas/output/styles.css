@@ -1,0 +1,263 @@
+/* ============================================
+   Barkas — Project Styles
+   Preset: SP-17 E-commerce Clean
+   Palette: Marine blue primary + teal secondary + emerald accent
+   ============================================ */
+
+/* --- CSS Variables (scoped to project) --- */
+html[data-project="barkas"] {
+  /* Primary — deep water blue */
+  --primary: #0590DD;
+  --primary-foreground: #FFFFFF;
+
+  /* Secondary — fresh teal wave */
+  --secondary: #01BFC4;
+  --secondary-foreground: #FFFFFF;
+
+  /* Accent — emerald CTA green */
+  --accent: #00E5A0;
+  --accent-foreground: #FFFFFF;
+
+  /* Backgrounds */
+  --background: #F8FAFB;
+  --foreground: #1A2B3C;
+
+  /* Muted — cool light gray */
+  --muted: #EEF3F6;
+  --muted-foreground: #5A7184;
+
+  /* Card */
+  --card: #FFFFFF;
+  --card-foreground: #1A2B3C;
+
+  /* Popover */
+  --popover: #FFFFFF;
+  --popover-foreground: #1A2B3C;
+
+  /* Border */
+  --border: #DDE5EA;
+  --input: #DDE5EA;
+  --ring: #0590DD;
+
+  /* Destructive */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  /* Chart colors */
+  --chart-1: #0590DD;
+  --chart-2: #01BFC4;
+  --chart-3: #00E5A0;
+  --chart-4: #EEF3F6;
+  --chart-5: #5A7184;
+
+  /* Sidebar (if used) */
+  --sidebar: #F8FAFB;
+  --sidebar-foreground: #1A2B3C;
+  --sidebar-primary: #0590DD;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF3F6;
+  --sidebar-accent-foreground: #1A2B3C;
+  --sidebar-border: #DDE5EA;
+  --sidebar-ring: #0590DD;
+
+  /* Radius — E-commerce Clean rounded-lg (8px) */
+  --radius: 0.5rem;
+}
+
+/* --- Tailwind @theme mapping --- */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+/* --- Custom Keyframes --- */
+
+/* Gentle floating movement — for decorative elements & badges */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Fade in from below — for scroll-reveal sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer / loading shine effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Stagger reveal — scale + fade for card grids */
+@keyframes stagger {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Wave drift — subtle horizontal sway for wave dividers */
+@keyframes wave-drift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+/* Card lift glow — subtle shadow pulse on hover for product cards */
+@keyframes card-glow {
+  0%, 100% {
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+  50% {
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+}
+
+/* --- Utility Animation Classes --- */
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--muted) 25%,
+    var(--secondary) 50%,
+    var(--muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-wave-drift {
+  animation: wave-drift 4s ease-in-out infinite;
+}
+
+.animate-card-glow {
+  animation: card-glow 3s ease-in-out infinite;
+}
+
+/* --- Stagger Delay Classes (.stagger-1 through .stagger-6) --- */
+
+.stagger-1 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation: stagger 0.5s ease-out both;
+  animation-delay: 0.6s;
+}
+
+/* --- Custom Scrollbar (marine theme) --- */
+
+html[data-project="barkas"] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--muted);
+}
+
+html[data-project="barkas"]::-webkit-scrollbar {
+  width: 8px;
+}
+
+html[data-project="barkas"]::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+html[data-project="barkas"]::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+html[data-project="barkas"]::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* --- Smooth Scroll --- */
+
+html {
+  scroll-behavior: smooth;
+}

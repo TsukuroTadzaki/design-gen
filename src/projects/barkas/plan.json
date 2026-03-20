@@ -41,7 +41,24 @@
       "pattern_name": "Two-Column Split",
       "why": "E-commerce hero з двома CTA ('Перейти до каталогу' + 'Підібрати комплект') потребує Two-Column Split: текст ліворуч з headline + subheadline + 2 кнопки, lifestyle-фото човна на воді праворуч. H-01 best for: 'e-commerce, app landing pages'. Контент ідеально лягає: badge + headline + description + 2 buttons ліворуч. Атмосферне фото човна праворуч з floating badge '500+ моделей'. Kava використовує H-04 — забезпечуємо variety.",
       "background": "dark",
-      "content_source": "design.json → pages[0].sections[0].content"
+      "content_source": "design.json → pages[0].sections[0].content",
+      "effects": [
+        {
+          "type": "BACKGROUND-PATTERN",
+          "variant": "dots",
+          "opacity": 0.03
+        },
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.1
+        },
+        {
+          "type": "HOVER-EFFECT",
+          "variant": "arrow-shift",
+          "target": "button"
+        }
+      ]
     },
     {
       "id": "home-advantages",
@@ -50,7 +67,19 @@
       "pattern_name": "Symmetric Card Grid",
       "why": "5 переваг рівної ваги (ціни, комплектація, консультанти, асортимент, знижки) — жодна не домінує. F-01 дає 3-column grid з рівними картками icon + title + description. 5 items розкладаються як 3+2 або 2+3 ряди. Best for: 'certifications display, tools with multiple capabilities' — підходить для trust-building переваг магазину.",
       "background": "light",
-      "content_source": "design.json → pages[0].sections[1].content"
+      "content_source": "design.json → pages[0].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.1
+        },
+        {
+          "type": "HOVER-EFFECT",
+          "variant": "lift",
+          "target": "card"
+        }
+      ]
     },
     {
       "id": "home-categories",
@@ -59,7 +88,19 @@
       "pattern_name": "Category Navigation Hub",
       "why": "6 категорій (Надувні човни, RIB, Алюмінієві, Мотори, Ехолоти, Аксесуари) з іконками, зображеннями та цінами 'від'. PR-07 — візуальна сітка категорій з icon + title + product count + description + CTA. Best for: 'large stores with many departments, multi-brand shops' — точний опис Barkas. 6 items ідеально лягають у 3×2 grid.",
       "background": "muted",
-      "content_source": "design.json → pages[0].sections[2].content"
+      "content_source": "design.json → pages[0].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.08
+        },
+        {
+          "type": "HOVER-EFFECT",
+          "variant": "lift",
+          "target": "card"
+        }
+      ]
     },
     {
       "id": "home-featured-products",
@@ -68,7 +109,19 @@
       "pattern_name": "Product Card Grid",
       "why": "4-8 карток популярних товарів з фото, назвою, характеристиками, ціною та кнопкою 'В кошик'. PR-01 — стандартний product grid для e-commerce: uniform cards, consistent aspect ratio, hover effects. Best for: 'e-commerce catalogs, product showcases'. SP-17 card_style з shadow-sm → shadow-md hover ідеально працює тут.",
       "background": "light",
-      "content_source": "design.json → pages[0].sections[3].content"
+      "content_source": "design.json → pages[0].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.08
+        },
+        {
+          "type": "HOVER-EFFECT",
+          "variant": "lift",
+          "target": "card"
+        }
+      ]
     },
     {
       "id": "home-how-it-works",
@@ -77,7 +130,19 @@
       "pattern_name": "Horizontal Step Grid with Connector",
       "why": "4 послідовні кроки замовлення: Обрати → Перевірити комплект → Оформити → Вийти на воду. W-01 — горизонтальна лінія з'єднує 4 кроки з номерами, картки з icon + title + description нижче. 4 steps ідеально для 4-column row. Best for: 'straightforward linear processes, quick onboarding' — процес покупки у Barkas лінійний і зрозумілий.",
       "background": "muted",
-      "content_source": "design.json → pages[0].sections[4].content"
+      "content_source": "design.json → pages[0].sections[4].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.12
+        },
+        {
+          "type": "DECORATIVE-ELEMENT",
+          "variant": "accent-line",
+          "position": "connector"
+        }
+      ]
     },
     {
       "id": "home-testimonials",
@@ -86,7 +151,19 @@
       "pattern_name": "Classic Card Grid",
       "why": "3 відгуки: новачок (Сергій), досвідчений (Дмитро), B2B (база відпочинку) — різні аватари цільової аудиторії. T-01 дає 3-column grid з рівними картками: rating + quote + avatar + name + details. 3 items — ідеальна кількість для T-01. Best for: 'general social proof, service businesses'. Кожен відгук включає конкретну модель товару — підсилює довіру.",
       "background": "dark",
-      "content_source": "design.json → pages[0].sections[5].content"
+      "content_source": "design.json → pages[0].sections[5].content",
+      "effects": [
+        {
+          "type": "BACKGROUND-PATTERN",
+          "variant": "dots",
+          "opacity": 0.03
+        },
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up",
+          "stagger": 0.1
+        }
+      ]
     },
     {
       "id": "home-brands",
@@ -95,7 +172,13 @@
       "pattern_name": "Infinite Horizontal Scroll",
       "why": "Логотипи 15+ брендів-партнерів (Bark, Kolibri, Aqua-Star, Parsun, Garmin, Lowrance та інші). PA-02 — auto-scrolling row з дублюванням для infinite loop. Best for: 'Trusted by sections, landing pages, high-volume partner networks'. 15+ логотипів — ідеально для horizontal scroll (6-8 visible). Не займає багато vertical space — важливо для compact SP-17 spacing.",
       "background": "light",
-      "content_source": "design.json → pages[0].sections[6].content"
+      "content_source": "design.json → pages[0].sections[6].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "home-faq",
@@ -104,7 +187,14 @@
       "pattern_name": "Single-Column Accordion",
       "why": "5 запитань без категоризації: вибір човна, ціни, доставка, гарантія, юрособи. Q-01 — universal single-column accordion, accessible, familiar. 5 items не потребують групування (Q-02) або табів (Q-03). Best for: 'medium-sized FAQs, most business types'. Простота Q-01 відповідає SP-17 clean approach.",
       "background": "muted",
-      "content_source": "design.json → pages[0].sections[7].content"
+      "content_source": "design.json → pages[0].sections[7].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "stagger-fade-up",
+          "stagger": 0.08
+        }
+      ]
     },
     {
       "id": "home-cta",
@@ -113,9 +203,19 @@
       "pattern_name": "Centered Single Column",
       "why": "Фінальний CTA з headline + text + 2 buttons ('Перейти до каталогу' + 'Отримати консультацію') + телефон. C-01 — vertically stacked centered content. Мінімальний, focused — ідеально для фінальної конверсії. Accent background виділяє секцію. Не потребує форми (C-02) або wizard (C-04).",
       "background": "accent",
-      "content_source": "design.json → pages[0].sections[8].content"
+      "content_source": "design.json → pages[0].sections[8].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        },
+        {
+          "type": "HOVER-EFFECT",
+          "variant": "arrow-shift",
+          "target": "button"
+        }
+      ]
     },
-
     {
       "id": "catalog-hero",
       "type": "hero",
@@ -123,7 +223,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "Каталог — search-focused entry point. H-02 centered: badge → headline 'Каталог товарів' → subtitle → search input. Floating elements можуть бути subtle product silhouettes. Немає потреби у two-column (H-01) — контент мінімальний. Best for: 'B2B SaaS, event countdowns, typography-focused brands'. Адаптуємо floating shapes як product icons.",
       "background": "dark",
-      "content_source": "design.json → pages[1].sections[0].content"
+      "content_source": "design.json → pages[1].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "catalog-categories-grid",
@@ -132,7 +238,13 @@
       "pattern_name": "Category Navigation Hub",
       "why": "8 категорій з іконками, описами та кількістю товарів. PR-07 — grid category cards з icon + title + count + description + CTA. 8 items лягають у 4×2 grid. Best for: 'large stores with many departments' — 8 відділів Barkas (ПВХ, RIB, алюмінієві, мотори, ехолоти, рятувальне, тенти, аксесуари).",
       "background": "light",
-      "content_source": "design.json → pages[1].sections[1].content"
+      "content_source": "design.json → pages[1].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "catalog-promo-banner",
@@ -141,7 +253,13 @@
       "pattern_name": "Trust-Building Guarantee Block",
       "why": "Промо-банер 'Комплектом вигідніше — знижка до 10%'. C-06 адаптується як promotional block: центрована картка з іконкою знижки, headline + text + CTA. Badge з відсотком знижки виділяє пропозицію. Гарантійний елемент C-06 перетворюється на badge акції. Простий і focused — не потребує складного layout.",
       "background": "muted",
-      "content_source": "design.json → pages[1].sections[2].content"
+      "content_source": "design.json → pages[1].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "catalog-cta",
@@ -150,9 +268,14 @@
       "pattern_name": "Centered Single Column",
       "why": "Fallback CTA 'Не знаєте з чого почати?' з кнопкою консультації та телефоном. C-01 centered — простий, не відволікає від каталогу.",
       "background": "accent",
-      "content_source": "design.json → pages[1].sections[3].content"
+      "content_source": "design.json → pages[1].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "category-breadcrumbs-header",
       "type": "breadcrumbs_and_header",
@@ -160,7 +283,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "Заголовок категорії з breadcrumbs (Головна → Каталог → Надувні човни), назвою, кількістю товарів та описом. H-02 centered text адаптується: breadcrumbs зверху, headline з count badge, description під ним. Floating elements не потрібні — використовуємо лише centered text частину. Компактніший за H-01 (не потрібен two-column для простого header).",
       "background": "light",
-      "content_source": "design.json → pages[2].sections[0].content"
+      "content_source": "design.json → pages[2].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "category-filters",
@@ -169,7 +298,13 @@
       "pattern_name": "Sidebar Filter + Grid",
       "why": "6 груп фільтрів (бренд, тип, місця, довжина, ціна, наявність) + 5 варіантів сортування. PR-02 — left sticky sidebar (250-280px) з filter controls + right grid. Best for: 'e-commerce with many attributes, technical catalogs'. 6 filter groups — складна таксономія, потребує sidebar. DESIGN_PRINCIPLES §6: 'sidebar for large catalogs'.",
       "background": "muted",
-      "content_source": "design.json → pages[2].sections[1].content"
+      "content_source": "design.json → pages[2].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "category-product-grid",
@@ -179,7 +314,13 @@
       "why": "Основна сітка карток товарів з 9 елементами на картці (фото, бренд, назва, характеристики, ціна, наявність, 'В кошик', обране, порівняти). PR-01 — uniform product grid з consistent aspect ratio та hover effects. Best for: 'e-commerce catalogs'. SP-17 card_style забезпечує structured cards з border та hover shadow.",
       "background": "light",
       "content_source": "design.json → pages[2].sections[2].content",
-      "notes": "Працює в парі з PR-02 фільтрами — grid є правою частиною sidebar layout"
+      "notes": "Працює в парі з PR-02 фільтрами — grid є правою частиною sidebar layout",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "category-description",
@@ -188,7 +329,13 @@
       "pattern_name": "Minimal Typography List",
       "why": "SEO-текст 'Як обрати надувний човен ПВХ' — чистий текстовий контент без зображень. B-05 — single column centered, pure typography, max-width constrained. Best for: 'long-form writing, editorial sites'. Мінімальний visual noise дозволяє тексту працювати для SEO без відволікання від товарів вище.",
       "background": "muted",
-      "content_source": "design.json → pages[2].sections[3].content"
+      "content_source": "design.json → pages[2].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "category-cta",
@@ -197,9 +344,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Не знайшли потрібну модель?' — простий CTA з 2 кнопками (зателефонувати, написати). C-01 centered — мінімальний, focused на конверсію.",
       "background": "accent",
-      "content_source": "design.json → pages[2].sections[4].content"
+      "content_source": "design.json → pages[2].sections[4].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "product-breadcrumbs",
       "type": "breadcrumbs",
@@ -208,7 +360,13 @@
       "why": "Мінімальний breadcrumb бар (Головна → Каталог → Категорія → Товар). H-02 адаптується як компактна навігаційна панель: лише breadcrumbs горизонтально, без headline та floating elements. Thin utility section.",
       "background": "light",
       "content_source": "design.json → pages[3].sections[0].content",
-      "notes": "Спрощений варіант H-02 — лише breadcrumbs, мінімальний py-4"
+      "notes": "Спрощений варіант H-02 — лише breadcrumbs, мінімальний py-4",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "product-main",
@@ -217,7 +375,13 @@
       "pattern_name": "Product Detail Split with Gallery",
       "why": "Класична картка товару: галерея 4-8 фото ліворуч + назва, бренд, ціна, характеристики (7 specs), наявність, доставка, кнопки ('В кошик', обране, порівняти, купити в 1 клік) праворуч. PR-04 — стандарт e-commerce product page: gallery з thumbnail strip + purchase area. Best for: 'any e-commerce product detail page'. Element count точно відповідає: 4-8 gallery images + title + price + 2-3 selectors + CTA.",
       "background": "muted",
-      "content_source": "design.json → pages[3].sections[1].content"
+      "content_source": "design.json → pages[3].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "product-tabs",
@@ -226,7 +390,13 @@
       "pattern_name": "Tabbed Content Switcher",
       "why": "4 вкладки: Опис, Характеристики, Відгуки, Доставка та оплата. F-07 — horizontal tabs з content area що перемикається. 4 tabs ідеально для F-07 (3-5 tabs). Best for: 'multi-category features' — адаптується для product information tabs. Progressive disclosure зменшує cognitive overload.",
       "background": "light",
-      "content_source": "design.json → pages[3].sections[2].content"
+      "content_source": "design.json → pages[3].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "product-related-accessories",
@@ -235,7 +405,13 @@
       "pattern_name": "Featured Hero + Related Grid",
       "why": "Блок 'Підійде до цього човна' з мотором, жилетами, веслами, насосом, тентом, якорем. PR-03 адаптується: заголовок зверху, 3-6 карток сумісних аксесуарів у grid або carousel. Best for: 'related items carousel, flagship + related'. Допродаж комплектації — ключовий для середнього чека Barkas.",
       "background": "muted",
-      "content_source": "design.json → pages[3].sections[3].content"
+      "content_source": "design.json → pages[3].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "product-recently-viewed",
@@ -245,7 +421,13 @@
       "why": "Карусель 4-8 раніше переглянутих товарів. PR-01 product card grid з horizontal scroll. Картки ідентичні каталогу для consistency — фото, назва, ціна, кнопка.",
       "background": "light",
       "content_source": "design.json → pages[3].sections[4].content",
-      "notes": "Реалізується як horizontal scroll carousel з PR-01 картками"
+      "notes": "Реалізується як horizontal scroll carousel з PR-01 картками",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "product-cta",
@@ -254,9 +436,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Потрібна допомога з вибором?' — консультація по телефону. C-01 centered, мінімальний. Accent background привертає увагу після довгої сторінки товару.",
       "background": "accent",
-      "content_source": "design.json → pages[3].sections[5].content"
+      "content_source": "design.json → pages[3].sections[5].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "cart-header",
       "type": "cart_header",
@@ -265,7 +452,13 @@
       "why": "Простий заголовок 'Кошик' з кількістю товарів. H-02 centered — мінімальний header без складного layout. Адаптується як utility header з title + count badge.",
       "background": "light",
       "content_source": "design.json → pages[4].sections[0].content",
-      "notes": "Спрощений варіант — лише title + item count badge"
+      "notes": "Спрощений варіант — лише title + item count badge",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "cart-items",
@@ -274,7 +467,13 @@
       "pattern_name": "Two-Column Cart with Sticky Summary",
       "why": "Список товарів з фото, назвою, ціною, кількістю (+-), сумою, видаленням + sticky order summary (сума, доставка, разом, CTA). EC-01 — стандарт для desktop e-commerce cart: left 66% items + right 34% sticky summary. Best for: 'multi-item orders, premium e-commerce'. Element count: item list з controls + summary card.",
       "background": "muted",
-      "content_source": "design.json → pages[4].sections[1].content"
+      "content_source": "design.json → pages[4].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "cart-recommended",
@@ -283,7 +482,13 @@
       "pattern_name": "Product Card Grid",
       "why": "'Часто купують разом' — 3-4 релевантні аксесуари. PR-01 product cards у horizontal row. Consistent з картками товарів по всьому сайту. Кількість (3-4) лягає в один ряд.",
       "background": "light",
-      "content_source": "design.json → pages[4].sections[2].content"
+      "content_source": "design.json → pages[4].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "cart-cta",
@@ -292,9 +497,14 @@
       "pattern_name": "Centered Single Column",
       "why": "Дублюючий CTA 'Оформити замовлення' для тих хто прокрутив повз sticky summary. C-01 centered — кнопка + link 'Продовжити покупки'.",
       "background": "accent",
-      "content_source": "design.json → pages[4].sections[1].content.summary"
+      "content_source": "design.json → pages[4].sections[1].content.summary",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "checkout-header",
       "type": "checkout_header",
@@ -303,7 +513,13 @@
       "why": "Прогрес-бар з 4 кроками: Контактні дані → Доставка → Оплата → Підтвердження. CO-02 horizontal progress bar з numbered steps + connecting lines. Адаптується як step indicator header — показує на якому етапі користувач. Active/completed/upcoming states для кожного кроку.",
       "background": "light",
       "content_source": "design.json → pages[5].sections[0].content",
-      "notes": "Використовуємо лише step indicator частину CO-02"
+      "notes": "Використовуємо лише step indicator частину CO-02",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "checkout-form",
@@ -312,7 +528,13 @@
       "pattern_name": "Multi-Section Single Page Checkout",
       "why": "Форма з 3 секціями: контактні дані (4 поля), доставка (3 варіанти), оплата (3 варіанти) + коментар. CO-01 — stacked form sections з step numbers у лівій колонці. Best for: 'standard e-commerce, desktop checkout'. Всі секції на одній сторінці — не потребує page transitions.",
       "background": "muted",
-      "content_source": "design.json → pages[5].sections[1].content"
+      "content_source": "design.json → pages[5].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "checkout-summary",
@@ -322,7 +544,13 @@
       "why": "Sticky бокова панель 'Ваше замовлення' з thumbnails товарів, сумою та доставкою. EC-01 sticky summary card адаптується як checkout order summary. Залишається видимою при scroll через форму — зменшує тривожність.",
       "background": "light",
       "content_source": "design.json → pages[5].sections[2].content",
-      "notes": "Sticky sidebar праворуч від checkout-form — разом утворюють CO-01 two-column layout"
+      "notes": "Sticky sidebar праворуч від checkout-form — разом утворюють CO-01 two-column layout",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "checkout-cta",
@@ -331,9 +559,14 @@
       "pattern_name": "Centered Single Column",
       "why": "Кнопка 'Підтвердити замовлення' та контакт для запитань. C-01 centered — focused на єдину дію.",
       "background": "accent",
-      "content_source": "design.json → pages[5].sections[1].content"
+      "content_source": "design.json → pages[5].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "thank-you-confirmation",
       "type": "confirmation",
@@ -341,7 +574,13 @@
       "pattern_name": "Trust-Building Guarantee Block",
       "why": "Підтвердження замовлення з іконкою check-circle, номером замовлення, текстом 'Очікуйте дзвінок за 30 хв'. C-06 адаптується: large icon top + headline + confirmation details у highlighted box + номер замовлення. Trust element = підтвердження що все OK.",
       "background": "light",
-      "content_source": "design.json → pages[6].sections[0].content"
+      "content_source": "design.json → pages[6].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "thank-you-next-steps",
@@ -350,7 +589,13 @@
       "pattern_name": "Horizontal Step Grid with Connector",
       "why": "3 наступні кроки: дзвінок менеджера → SMS з ТТН → отримання. W-01 — horizontal row з connecting line та numbered cards. 3 steps ідеально для 3-column grid. Візуально показує що далі — зменшує post-purchase anxiety.",
       "background": "muted",
-      "content_source": "design.json → pages[6].sections[1].content"
+      "content_source": "design.json → pages[6].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "thank-you-cta",
@@ -359,9 +604,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Можливо, ви забули щось важливе?' — допродаж аксесуарів. C-01 centered з 2 кнопками (аксесуари, на головну).",
       "background": "accent",
-      "content_source": "design.json → pages[6].sections[2].content"
+      "content_source": "design.json → pages[6].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "wishlist-header",
       "type": "header",
@@ -369,7 +619,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "Заголовок 'Улюблені товари' з subtitle та empty state (іконка серця, текст, CTA на каталог). H-02 centered — адаптується для page header з conditional empty state rendering.",
       "background": "light",
-      "content_source": "design.json → pages[7].sections[0].content"
+      "content_source": "design.json → pages[7].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "wishlist-product-grid",
@@ -378,7 +634,13 @@
       "pattern_name": "Product Card Grid Wishlist",
       "why": "Збережені товари з кнопками 'В кошик' та 'Видалити'. EC-03 — спеціалізований wishlist grid з product cards, heart/remove button, add-to-cart. Best for: 'fashion, lifestyle e-commerce, aspirational browsing'. Картки ідентичні каталогу + remove action.",
       "background": "muted",
-      "content_source": "design.json → pages[7].sections[1].content"
+      "content_source": "design.json → pages[7].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "wishlist-cta",
@@ -387,9 +649,14 @@
       "pattern_name": "Centered Single Column",
       "why": "CTA на каталог для продовження вибору. C-01 centered — мінімальний, не відволікає від збережених товарів.",
       "background": "accent",
-      "content_source": "design.json → cta_strategy"
+      "content_source": "design.json → cta_strategy",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "compare-header",
       "type": "header",
@@ -397,7 +664,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "Заголовок 'Порівняння товарів' з інструкцією та empty state. H-02 centered — page header з conditional content.",
       "background": "light",
-      "content_source": "design.json → pages[8].sections[0].content"
+      "content_source": "design.json → pages[8].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "compare-table",
@@ -406,7 +679,13 @@
       "pattern_name": "Comparison Table",
       "why": "Порівняння 2-4 човнів: фото, ціна зверху, рядки характеристик (довжина, ширина, маса, місця, тип дна, ПВХ, мотор, комплектація, гарантія) + highlight differences + add-to-cart per item. F-05 — tabular grid з column headers та grouped feature rows. Best for: 'feature comparisons, use case matrices'. 9 рядків характеристик × 2-4 колонки товарів.",
       "background": "muted",
-      "content_source": "design.json → pages[8].sections[1].content"
+      "content_source": "design.json → pages[8].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "compare-cta",
@@ -415,9 +694,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Не можете визначитись? Зверніться до консультанта.' C-01 centered — альтернативний шлях для тих хто не може обрати між моделями.",
       "background": "accent",
-      "content_source": "design.json → cta_strategy"
+      "content_source": "design.json → cta_strategy",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "promotions-hero",
       "type": "hero",
@@ -425,7 +709,13 @@
       "pattern_name": "Full-Bleed Photo with Overlay",
       "why": "Hero акцій з full-bleed фото човнів/товарів та overlay 'Акції та спецпропозиції — кількість обмежена'. H-04 — full-bleed image з dark gradient та text overlay. Створює urgency через візуальний impact. Best for: 'luxury fashion, hotels' — адаптуємо для promotional impact з яскравими badge елементами.",
       "background": "dark",
-      "content_source": "design.json → pages[9].sections[0].content"
+      "content_source": "design.json → pages[9].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "promotions-promo-grid",
@@ -434,7 +724,13 @@
       "pattern_name": "Uniform Card Grid",
       "why": "3 акції: Комплект «Рибалка» -10%, Розпродаж аксесуарів -25%, Безкоштовна доставка. SV-01 — 3-column grid з uniform cards: icon/badge header + title + description + CTA. 3 items ідеально для single row. Кожна картка з badge знижки. Best for: 'multi-service businesses' — адаптуємо для promotional cards.",
       "background": "light",
-      "content_source": "design.json → pages[9].sections[1].content"
+      "content_source": "design.json → pages[9].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "promotions-cta",
@@ -443,9 +739,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Хочете дізнатися про нові акції першими?' — підписка на розсилку. C-01 з email input + subscribe button. Простий newsletter CTA.",
       "background": "accent",
-      "content_source": "design.json → pages[9].sections[2].content"
+      "content_source": "design.json → pages[9].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "news-header",
       "type": "header",
@@ -453,7 +754,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "Заголовок 'Новини та поради' з subtitle. H-02 centered — простий page header.",
       "background": "light",
-      "content_source": "design.json → pages[10].sections[0].content"
+      "content_source": "design.json → pages[10].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-featured-article",
@@ -463,7 +770,13 @@
       "why": "Головна стаття 'Як обрати перший надувний човен' — large featured card з image, gradient overlay, title, excerpt, date, CTA. B-01 featured portion — full-width hero article card. Best for: 'company blogs, news sections'. Великий формат привертає увагу до головного контенту.",
       "background": "muted",
       "content_source": "design.json → pages[10].sections[1].content",
-      "notes": "Використовуємо лише featured (верхню) частину B-01"
+      "notes": "Використовуємо лише featured (верхню) частину B-01",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-articles-grid",
@@ -472,7 +785,13 @@
       "pattern_name": "Compact Card Grid",
       "why": "Список статей з зображеннями, датою, категорією, заголовком, описом + категорії (Огляди, Поради, Новинки, Порівняння) + пагінація. B-06 — 3-column grid з compact cards та accent bar per category. Best for: 'multi-category blogs, organized news feeds'. Category accent bars дозволяють візуально розрізняти типи контенту.",
       "background": "light",
-      "content_source": "design.json → pages[10].sections[2].content"
+      "content_source": "design.json → pages[10].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-cta",
@@ -481,9 +800,14 @@
       "pattern_name": "Centered Single Column",
       "why": "CTA на каталог або консультацію. C-01 centered — простий redirect для читачів блогу.",
       "background": "accent",
-      "content_source": "design.json → cta_strategy"
+      "content_source": "design.json → cta_strategy",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "news-article-header",
       "type": "article_header",
@@ -491,7 +815,13 @@
       "pattern_name": "Full-Bleed Photo with Overlay",
       "why": "Hero статті з full-bleed зображенням (човен на озері) + breadcrumbs + title + metadata (дата, автор, час читання). H-04 — full-bleed photo з gradient overlay та text overlay. Створює immersive entry point для статті.",
       "background": "light",
-      "content_source": "design.json → pages[11].sections[0].content"
+      "content_source": "design.json → pages[11].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-article-body",
@@ -500,7 +830,13 @@
       "pattern_name": "Minimal Typography List",
       "why": "Повний текст статті з підзаголовками H2/H3, фото, таблицями порівняння. B-05 — single column centered, typography-first. Best for: 'long-form writing, editorial sites'. Max-width constrained для комфортного читання. Фото та таблиці вбудовуються в текстовий потік.",
       "background": "muted",
-      "content_source": "design.json → pages[11].sections[1].content"
+      "content_source": "design.json → pages[11].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-article-related-products",
@@ -509,7 +845,13 @@
       "pattern_name": "Product Card Grid",
       "why": "'Моделі з цієї статті' — 3-4 картки товарів з цінами та кнопкою 'В кошик'. PR-01 product cards — consistent з каталогом. Конвертує читача в покупця через конкретні товари зі статті.",
       "background": "light",
-      "content_source": "design.json → pages[11].sections[2].content"
+      "content_source": "design.json → pages[11].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-article-related-articles",
@@ -518,7 +860,13 @@
       "pattern_name": "Compact Card Grid",
       "why": "'Читайте також' — 3 релевантні статті. B-06 compact cards — consistent з news page grid. 3 items у single row. Утримує читача на сайті.",
       "background": "muted",
-      "content_source": "design.json → pages[11].sections[3].content"
+      "content_source": "design.json → pages[11].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "news-article-cta",
@@ -527,9 +875,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Готові обрати свій перший човен?' — каталог + консультація. C-01 centered — фінальна конверсія читача.",
       "background": "accent",
-      "content_source": "design.json → pages[11].sections[4].content"
+      "content_source": "design.json → pages[11].sections[4].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "about-hero",
       "type": "hero",
@@ -537,7 +890,13 @@
       "pattern_name": "Full-Bleed Photo with Overlay",
       "why": "'Barkas — ваш надійний партнер на воді'. H-04 — full-bleed фото команди на причалі з gradient overlay та centered text. Створює емоційний first impression для сторінки довіри. Best for: 'real estate, photography, luxury' — адаптуємо для corporate brand hero.",
       "background": "dark",
-      "content_source": "design.json → pages[12].sections[0].content"
+      "content_source": "design.json → pages[12].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "about-story",
@@ -546,7 +905,13 @@
       "pattern_name": "Zigzag Alternating Rows",
       "why": "Історія Barkas з текстом та фото команди. F-03 — image-left/text-right alternating layout. Одна велика row: фото команди ліворуч, текст історії праворуч. Best for: 'educational content, step-by-step narratives, detailed feature explanations'. Storytelling approach для побудови emotional connection.",
       "background": "light",
-      "content_source": "design.json → pages[12].sections[1].content"
+      "content_source": "design.json → pages[12].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "about-values",
@@ -555,7 +920,13 @@
       "pattern_name": "Symmetric Card Grid",
       "why": "3 принципи: Чесна ціна, Експертність з досвіду, Підтримка після покупки. F-01 — 3-column grid з рівними картками icon + title + description. 3 items — ідеальна кількість для single row. Best for: 'certifications display' — адаптуємо для company values.",
       "background": "muted",
-      "content_source": "design.json → pages[12].sections[2].content"
+      "content_source": "design.json → pages[12].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "about-numbers",
@@ -564,7 +935,13 @@
       "pattern_name": "Horizontal Counter Row",
       "why": "4 метрики: 500+ моделей, 15+ брендів, 10 000+ клієнтів, 5+ років. N-01 — horizontal row з animated counter numbers + labels. 4 stats — ідеально для N-01. Best for: 'trust-building, corporate about pages'. Великі числа створюють impression масштабу. Dark background підсилює контраст цифр.",
       "background": "dark",
-      "content_source": "design.json → pages[12].sections[3].content"
+      "content_source": "design.json → pages[12].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "about-cta",
@@ -573,9 +950,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Маєте запитання?' — телефон + написати. C-01 centered — простий contact CTA для сторінки довіри.",
       "background": "accent",
-      "content_source": "design.json → pages[12].sections[4].content"
+      "content_source": "design.json → pages[12].sections[4].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "delivery-payment-header",
       "type": "header",
@@ -583,7 +965,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "'Доставка і оплата — прозорі умови без прихованих платежів'. H-02 centered — простий page header з reassuring subtitle.",
       "background": "light",
-      "content_source": "design.json → pages[13].sections[0].content"
+      "content_source": "design.json → pages[13].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "delivery-payment-delivery",
@@ -592,7 +980,13 @@
       "pattern_name": "Shipping Methods Comparison Table",
       "why": "3 варіанти доставки (НП відділення, НП адресна, габаритна) з описами, іконками та примітками. SH-03 — comparison table з rows per method: icon, name, delivery time, cost, features. Best for: 'multiple shipping options, transparent pricing'. 3 methods ідеально (3-5 rows). Banner з терміном відправки (1-2 дні) зверху.",
       "background": "muted",
-      "content_source": "design.json → pages[13].sections[1].content"
+      "content_source": "design.json → pages[13].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "delivery-payment-payment",
@@ -601,7 +995,13 @@
       "pattern_name": "Symmetric Card Grid",
       "why": "3 варіанти оплати (при отриманні, на карту, безготівковий) з іконками та описами. F-01 — 3-column grid з icon + title + description cards. 3 items у single row. Кожен метод рівноцінний — symmetric layout.",
       "background": "light",
-      "content_source": "design.json → pages[13].sections[2].content"
+      "content_source": "design.json → pages[13].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "delivery-payment-cta",
@@ -610,9 +1010,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Маєте запитання щодо доставки?' — телефон для нестандартних замовлень. C-01 centered.",
       "background": "accent",
-      "content_source": "design.json → pages[13].sections[3].content"
+      "content_source": "design.json → pages[13].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "warranty-header",
       "type": "header",
@@ -620,7 +1025,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "'Гарантія та повернення — офіційна гарантія виробника, прозорі умови'. H-02 centered — reassuring page header.",
       "background": "light",
-      "content_source": "design.json → pages[14].sections[0].content"
+      "content_source": "design.json → pages[14].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "warranty-info",
@@ -629,7 +1040,13 @@
       "pattern_name": "Symmetric Card Grid",
       "why": "3 блоки: офіційна гарантія, гарантійне обслуговування, повернення 14 днів. F-01 — 3 рівні картки з icon + title + description. Кожен блок однаково важливий для trust-building.",
       "background": "muted",
-      "content_source": "design.json → pages[14].sections[1].content"
+      "content_source": "design.json → pages[14].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "warranty-return-process",
@@ -638,7 +1055,13 @@
       "pattern_name": "Horizontal Step Grid with Connector",
       "why": "4 кроки повернення: Зв'язатися → Отримати інструкції → Відправити → Отримати кошти. W-01 — horizontal step grid з connecting line. 4 steps, лінійний процес. Best for: 'straightforward linear processes'. Візуалізує простоту повернення.",
       "background": "light",
-      "content_source": "design.json → pages[14].sections[2].content"
+      "content_source": "design.json → pages[14].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "warranty-cta",
@@ -647,9 +1070,14 @@
       "pattern_name": "Centered Single Column",
       "why": "'Виникли питання щодо гарантії?' — телефон + написати. C-01 centered.",
       "background": "accent",
-      "content_source": "design.json → pages[14].sections[3].content"
+      "content_source": "design.json → pages[14].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
-
     {
       "id": "contacts-header",
       "type": "header",
@@ -657,7 +1085,13 @@
       "pattern_name": "Centered Text with Floating Elements",
       "why": "'Контакти — зв'яжіться будь-яким зручним способом'. H-02 centered — welcoming page header.",
       "background": "light",
-      "content_source": "design.json → pages[15].sections[0].content"
+      "content_source": "design.json → pages[15].sections[0].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "contacts-info",
@@ -666,7 +1100,13 @@
       "pattern_name": "Symmetric Card Grid",
       "why": "3 канали зв'язку (телефон, Viber/Telegram, Email) з іконками, значеннями та примітками + графік роботи. F-01 — 3 картки каналів + окрема секція графіку. Кожен канал рівноцінний — symmetric layout з icon + label + value + note.",
       "background": "muted",
-      "content_source": "design.json → pages[15].sections[1].content"
+      "content_source": "design.json → pages[15].sections[1].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "contacts-form",
@@ -675,7 +1115,13 @@
       "pattern_name": "Form + Information Sidebar",
       "why": "Форма 'Напишіть нам' з 3 полями (ім'я, телефон/email, повідомлення). C-02 — form ліворуч + info sidebar праворуч. Sidebar може показувати графік роботи та швидкі контакти поруч з формою. Best for: 'professional contact, multi-office companies'.",
       "background": "light",
-      "content_source": "design.json → pages[15].sections[2].content"
+      "content_source": "design.json → pages[15].sections[2].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     },
     {
       "id": "contacts-callback",
@@ -684,7 +1130,13 @@
       "pattern_name": "Centered Single Column",
       "why": "'Замовити дзвінок — зателефонуємо за 30 хвилин'. C-01 centered з одним полем телефону + CTA. Мінімальна форма, accent background. Не потребує sidebar (C-02) — лише phone input.",
       "background": "accent",
-      "content_source": "design.json → pages[15].sections[3].content"
+      "content_source": "design.json → pages[15].sections[3].content",
+      "effects": [
+        {
+          "type": "REVEAL-ANIMATION",
+          "variant": "fade-up"
+        }
+      ]
     }
   ]
 }

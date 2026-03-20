@@ -45,5 +45,45 @@ Generate a plan.json that assigns a specific style preset and layout pattern to 
 - Human reviews plan.json before Phase 3 and can change any preset or pattern
 - Every "why" field must be specific to THIS project — not generic ("this pattern looks good")
 
+## Effect Assignment (CRITICAL)
+
+After selecting pattern for each section, you MUST assign creative effects.
+
+Read docs/CREATIVE_EFFECTS.md for the full catalog of 12 parametric effects.
+
+For EACH section in plan.json, add an "effects" array:
+
+```json
+{
+  "id": "home-hero",
+  "pattern_id": "H-01",
+  "pattern_name": "Two-Column Split",
+  "effects": [
+    { "type": "GRADIENT-LAYER", "variant": "radial-orbs", "animate": "float", "opacity": 0.15 },
+    { "type": "3D-TRANSFORM", "target": "image", "trigger": "static", "axis": "Y", "angle": 5 },
+    { "type": "REVEAL-ANIMATION", "variant": "stagger-fade-up", "stagger": 0.1 },
+    { "type": "HOVER-EFFECT", "variant": "arrow-shift", "target": "button" }
+  ],
+  "background": "dark",
+  ...
+}
+```
+
+### Rules:
+- Every section MUST have at least 1 effect
+- Hero sections: 2-3 effects
+- CTA sections: 1-2 effects
+- Card-based sections: REVEAL-ANIMATION + HOVER-EFFECT minimum
+- Stats sections: SCROLL-DRIVEN:counter + REVEAL-ANIMATION
+- Check Compatibility Matrix in CREATIVE_EFFECTS.md — don't assign incompatible effects for the style preset
+- Check "Never combine" rules
+- For hero: ensure effects differ from other projects' heroes (check existing plan.json files)
+- Include specific parameters, not just type — "variant": "radial-orbs" not just "type": "GRADIENT-LAYER"
+
+### Anti-AI-defaults:
+- Do NOT add badge/label above hero heading unless plan.json content explicitly includes one
+- Do NOT default to the same 3 effects for every hero (orbs + fade-up + gradient text)
+- Vary effects between sections on the same page — if features has border-reveal hover, services should have different hover
+
 ## Output
 Generate plan.json following the exact schema in schemas/plan.schema.json.
